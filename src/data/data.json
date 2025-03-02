@@ -1,0 +1,200 @@
+{
+    "Header": {
+      "paragraph": "Revolutionizing livestock farming with expert veterinary care, top-quality agrovet products, and innovative digital solutions—because healthy livestock means a thriving farm."
+    },
+    "About": {
+      "paragraph": "Vet Mashinani is the ultimate one-stop platform for farmers and veterinarians. We connect you with certified veterinary professionals, premium agrovet products, and essential farm supplies—all at your fingertips. Our mission is simple: to make livestock farming easier, more profitable, and sustainable through expert advice, innovative technology, and seamless access to veterinary care and farm essentials.",
+      "Why": [
+        "Instantly connect with certified veterinarians near you.",
+        "Access high-quality livestock medication, feeds, and supplements."
+      ],
+      "Why2": [
+        "Get essential farm products for better productivity.",
+        "Leverage technology for healthier livestock and higher yields."
+      ]
+    },
+
+"Services": [
+  {
+    "icon": "fa fa-user-md",
+    "name": "Vet Directory",
+    "text": "Easily connect with certified veterinarians for expert advice, diagnosis, and treatment to ensure your livestock stays healthy."
+  },
+  {
+    "icon": "fa fa-shopping-cart",
+    "name": "AgrovetHub",
+    "text": "Find high-quality agrovet products, including animal feeds, vaccines, and supplements, from trusted suppliers in your area."
+  },
+  {
+    "icon": "fa fa-database",
+    "name": "FarmHub",
+    "text": "Access farm essentials, including livestock, poultry, and farm equipment, to boost your agricultural productivity."
+}
+],
+
+"Pricing": [
+    {
+      "icon": "fa fa-user-md",
+      "service": "Vet Directory",
+      "Basic Plan": {
+        "price": "Ksh 1,500/month",
+        "discount": "10% off for first-time users",
+        "features": [
+          "Access to certified veterinarians",
+          "Unlimited consultation booking",
+          "Limited vet recommendations"
+        ],
+        "duration": "Monthly",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Pro Plan": {
+        "price": "Ksh 8,000/6 months",
+        "discount": "15% off for renewing customers",
+        "features": [
+          "Priority vet consultations",
+          "Unlimited vet recommendations",
+          "Emergency vet support"
+        ],
+        "duration": "6 months",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Elite Plan": {
+        "price": "Ksh 15,000/year",
+        "discount": "20% off for long-term subscribers",
+        "features": [
+          "Unlimited vet consultations",
+          "Personalized vet support",
+          "Access to premium veterinary insights"
+        ],
+        "duration": "1 year",
+        "renewal": "Auto-renewal (optional)"
+      }
+    },
+    {
+      "icon": "fa fa-shopping-cart",
+      "service": "AgrovetHub",
+      "Basic Plan": {
+        "price": "Ksh 2,000/month",
+        "discount": "5% off on first purchase",
+        "features": [
+          "Access to agrovet product listings",
+          "Basic supplier connections",
+          "Limited product recommendations"
+        ],
+        "duration": "Monthly",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Pro Plan": {
+        "price": "Ksh 10,000/6 months",
+        "discount": "10% off on bulk purchases",
+        "features": [
+          "Verified supplier connections",
+          "Priority customer support",
+          "Exclusive product deals"
+        ],
+        "duration": "6 months",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Elite Plan": {
+        "price": "Ksh 18,000/year",
+        "discount": "15% off on all orders",
+        "features": [
+          "Unlimited supplier connections",
+          "Premium customer support",
+          "Personalized agrovet product recommendations"
+        ],
+        "duration": "1 year",
+        "renewal": "Auto-renewal (optional)"
+      }
+    },
+    {
+      "icon": "fa fa-database",
+      "service": "FarmHub",
+      "Basic Plan": {
+        "price": "Ksh 3,500/month",
+        "discount": "5% off for first-time users",
+        "features": [
+          "Basic farm product listings",
+          "Limited supplier connections",
+          "Farm equipment rental options"
+        ],
+        "duration": "Monthly",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Pro Plan": {
+        "price": "Ksh 18,000/6 months",
+        "discount": "10% off on bulk equipment rentals",
+        "features": [
+          "Priority access to farm products",
+          "Expanded supplier network",
+          "Personalized farm consultations"
+        ],
+        "duration": "6 months",
+        "renewal": "Auto-renewal (optional)"
+      },
+      "Elite Plan": {
+        "price": "Ksh 30,000/year",
+        "discount": "20% off for long-term subscribers",
+        "features": [
+          "Unlimited supplier connections",
+          "Premium farm consultations",
+          "Exclusive farm product deals"
+        ],
+        "duration": "1 year",
+        "renewal": "Auto-renewal (optional)"
+      }
+    }
+],
+
+"Testimonials": [
+    {
+      "img": "img/testimonials/rupra.png",
+      "text": "\"Vet Mashinani has revolutionized how we provide veterinary services. Their platform seamlessly connects farmers with certified veterinarians, ensuring timely and effective animal healthcare.\"",
+      "name": "Dr. Rupra Singh"
+    },
+    {
+      "img": "img/testimonials/odoyo.png",
+      "text": "\"Thanks to Vet Mashinani, accessing quality veterinary services has never been easier. Their user-friendly platform and dedicated support team have made a significant impact on our practice.\"",
+      "name": "Dr. Collins Odoyo"
+    },
+    {
+      "img": "img/testimonials/ricardo.png",
+      "text": "\"Vet Mashinani is a game-changer for livestock farmers. The ability to consult experienced vets remotely and get real-time advice has greatly improved animal health and productivity.\"",
+      "name": "Mr. Ricardo Seda"
+    }
+],
+
+"Team": [
+    {
+      "img": "img/team/josphine.png",
+      "name": "Josphine Otieno, BA. Community Development",
+      "job": "Founder & Director – Leading Vet Mashinani’s vision to improve veterinary access for farmers, fostering partnerships, and ensuring impactful service delivery."
+    },
+    {
+      "img": "img/team/kasuku.png",
+      "name": "Michael Kasuku, BSc. Computer Science",
+      "job": "Lead Software Engineer – Designing and developing the Vet Mashinani platform to provide seamless farmer-veterinarian connections and efficient service delivery."
+    },
+    {
+      "img": "img/team/daisy.png",
+      "name": "Daisy Lopez, BSc. Information Technology",
+      "job": "Chief Technology Officer (CTO) – Overseeing system scalability, optimizing platform performance, and driving technical innovation for Vet Mashinani."
+    },
+    {
+      "img": "img/team/mugambi.png",
+      "name": "Brian Mugambi, BSc. Computer Science",
+      "job": "Cybersecurity & IT Infrastructure Lead – Ensuring data security, maintaining system integrity, and safeguarding Vet Mashinani’s digital platform."
+    }
+],
+
+"Contact": {
+  "address": "Kisumu, Kenya",
+  "phone": "+254741392099",
+  "email": "vetmashinani@gmail.com",
+  "facebook": "https://www.facebook.com/vetmashinani",
+  "x": "https://x.com/vetmashinani",
+  "linkedin": "https://www.linkedin.com/company/vetmashinani",
+  "instagram": "https://www.instagram.com/vetmashinani",
+  "youtube": "https://www.youtube.com/@vetmashinani"
+}
+}

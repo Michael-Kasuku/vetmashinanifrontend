@@ -1,0 +1,26 @@
+<div id="testimonials">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>What our clients say</h2>
+      </div>
+      <div class="row">
+        <ng-container *ngIf="data && data.length; else loading">
+          <div *ngFor="let d of data" class="col-md-4">
+            <div class="testimonial">
+              <div class="testimonial-image">
+                <img [src]="d.img" alt="Testimonial image" />
+              </div>
+              <div class="testimonial-content">
+                <p>"{{ d.text }}"</p>
+                <div class="testimonial-meta"> - {{ d.name }} </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #loading>
+          <p class="text-center">Loading...</p>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+  

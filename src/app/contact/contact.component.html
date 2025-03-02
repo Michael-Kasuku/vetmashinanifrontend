@@ -1,0 +1,80 @@
+<div id="contact">
+    <div class="container">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="section-title">
+            <h2>Get In Touch</h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-4 contact-info p-4 shadow-sm rounded-3 bg-white border">
+        <h3 class="mb-4 text-dark fw-semibold">Contact Info</h3>
+        <div class="contact-item d-flex align-items-center mb-3">
+          <div class="icon-box bg-danger text-white rounded-circle me-3">
+            <i class="fa fa-map-marker fs-5"></i>
+          </div>
+          <p class="mb-0 text-muted">
+            <strong class="text-dark">Address:</strong> {{ data?.address || 'Loading...' }}
+          </p>
+        </div>
+        <div class="contact-item d-flex align-items-center mb-3">
+          <div class="icon-box bg-success text-white rounded-circle me-3">
+            <i class="fa fa-phone fs-5"></i>
+          </div>
+          <p class="mb-0 text-muted">
+            <strong class="text-dark">Phone:</strong> {{ data?.phone || 'Loading...' }}
+          </p>
+        </div>
+        <div class="contact-item d-flex align-items-center">
+          <div class="icon-box bg-warning text-white rounded-circle me-3">
+            <i class="fa fa-envelope fs-5"></i>
+          </div>
+          <p class="mb-0 text-muted">
+            <strong class="text-dark">Email:</strong> {{ data?.email || 'Loading...' }}
+          </p>
+        </div>
+      </div>
+  
+      <div class="col-md-12">
+        <div class="row">
+          <div class="social">
+            <ul>
+              <li>
+                <a [href]="data?.facebook || '/'">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a [href]="data?.x || '/'">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a [href]="data?.linkedin || '/'">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+              <li>
+                <a [href]="data?.instagram || '/'">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a [href]="data?.youtube || '/'">
+                  <i class="fa fa-youtube"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="footer">
+    <div class="container text-center">
+      <p>&copy; 2025 Vet Mashinani</p>
+    </div>
+  </div>
+  

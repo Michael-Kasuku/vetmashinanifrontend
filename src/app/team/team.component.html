@@ -1,0 +1,22 @@
+<div id="team" class="text-center">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2 section-title">
+        <h2>Meet the Team</h2>
+      </div>
+      <div id="row">
+        <ng-container *ngIf="data?.length; else loading">
+          <div *ngFor="let d of data; let i = index" class="col-md-3 col-sm-6 team">
+            <div class="thumbnail">
+              <img [src]="d.img" alt="..." class="team-img" />
+              <div class="caption">
+                <h4>{{ d.name }}</h4>
+                <p>{{ d.job }}</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+        <ng-template #loading>Loading...</ng-template>
+      </div>
+    </div>
+  </div>
+  
