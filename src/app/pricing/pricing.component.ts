@@ -48,4 +48,9 @@ export class PricingComponent {
       key => key !== 'icon' && key !== 'service'
     );
   }
+  
+  redirectToLink(): void {
+    window.location.href = 'https://vetmashinani-001-site1.qtempurl.com';
+  }
+  
 }

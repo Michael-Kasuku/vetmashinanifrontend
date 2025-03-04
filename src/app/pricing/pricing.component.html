@@ -25,9 +25,9 @@
                         <li *ngFor="let feature of key.value.features" class="list-group-item">{{ feature }}</li>
                       </ul>
                       <div class="text-center mt-3">
-                        <button class="btn" [ngClass]="getPlanClass(key.key)">
+                        <button class="btn" [ngClass]="getPlanClass(key.key)" (click)="redirectToLink()">
                           {{ getButtonLabel(key.key) }}
-                        </button>
+                        </button>                        
                       </div>
                     </div>
                   </ng-container>
