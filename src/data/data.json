@@ -47,17 +47,6 @@
         "duration": "Monthly",
         "renewal": "Auto-renewal (optional)"
       },
-      "Pro Plan": {
-        "price": "Ksh 8,000/6 months",
-        "discount": "15% off for renewing customers",
-        "features": [
-          "Priority vet consultations",
-          "Unlimited vet recommendations",
-          "Emergency vet support"
-        ],
-        "duration": "6 months",
-        "renewal": "Auto-renewal (optional)"
-      },
       "Elite Plan": {
         "price": "Ksh 15,000/year",
         "discount": "20% off for long-term subscribers",
@@ -84,17 +73,6 @@
         "duration": "Monthly",
         "renewal": "Auto-renewal (optional)"
       },
-      "Pro Plan": {
-        "price": "Ksh 10,000/6 months",
-        "discount": "10% off on bulk purchases",
-        "features": [
-          "Verified supplier connections",
-          "Priority customer support",
-          "Exclusive product deals"
-        ],
-        "duration": "6 months",
-        "renewal": "Auto-renewal (optional)"
-      },
       "Elite Plan": {
         "price": "Ksh 18,000/year",
         "discount": "15% off on all orders",
@@ -119,17 +97,6 @@
           "Farm equipment rental options"
         ],
         "duration": "Monthly",
-        "renewal": "Auto-renewal (optional)"
-      },
-      "Pro Plan": {
-        "price": "Ksh 18,000/6 months",
-        "discount": "10% off on bulk equipment rentals",
-        "features": [
-          "Priority access to farm products",
-          "Expanded supplier network",
-          "Personalized farm consultations"
-        ],
-        "duration": "6 months",
         "renewal": "Auto-renewal (optional)"
       },
       "Elite Plan": {
