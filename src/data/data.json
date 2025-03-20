@@ -1,116 +1,27 @@
 {
     "Header": {
-      "paragraph": "Revolutionizing livestock farming with expert veterinary care, top-quality agrovet products, and innovative digital solutions—because healthy livestock means a thriving farm."
+      "paragraph": "Vet Mashinani is a digital platform designed to connect certified veterinarians with farmers in rural areas, ensuring improved access to livestock healthcare."
     },
     "About": {
-      "paragraph": "Vet Mashinani is the ultimate one-stop platform for farmers and veterinarians. We connect you with certified veterinary professionals, premium agrovet products, and essential farm supplies—all at your fingertips. Our mission is simple: to make livestock farming easier, more profitable, and sustainable through expert advice, innovative technology, and seamless access to veterinary care and farm essentials.",
-      "Why": [
-        "Instantly connect with certified veterinarians near you.",
-        "Access high-quality livestock medication, feeds, and supplements."
-      ],
-      "Why2": [
-        "Get essential farm products for better productivity.",
-        "Leverage technology for healthier livestock and higher yields."
-      ]
+      "paragraph": "Many small-scale farmers struggle to get timely veterinary services, leading to preventable diseases and significant economic losses. Vet Mashinani bridges this gap by enabling farmers to book veterinary visits, access telemedicine consultations, and receive AI-driven disease diagnoses based on reported symptoms."
     },
 
 "Services": [
   {
     "icon": "fa fa-user-md",
-    "name": "Vet Directory",
-    "text": "Easily connect with certified veterinarians for expert advice, diagnosis, and treatment to ensure your livestock stays healthy."
+    "name": "TeleVet Consultations",
+    "text": "Access remote veterinary consultations via video calls or chat, ensuring timely medical advice for your livestock."
+  },
+  {
+    "icon": "fa fa-stethoscope",
+    "name": "AI Disease Diagnosis",
+    "text": "Get AI-driven disease diagnosis based on reported symptoms, helping you detect and manage livestock illnesses early."
   },
   {
     "icon": "fa fa-shopping-cart",
     "name": "AgrovetHub",
-    "text": "Find high-quality agrovet products, including animal feeds, vaccines, and supplements, from trusted suppliers in your area."
-  },
-  {
-    "icon": "fa fa-database",
-    "name": "FarmHub",
-    "text": "Access farm essentials, including livestock, poultry, and farm equipment, to boost your agricultural productivity."
-}
-],
-
-"Pricing": [
-    {
-      "icon": "fa fa-user-md",
-      "service": "Vet Directory",
-      "Basic Plan": {
-        "price": "Ksh 1,500/month",
-        "discount": "10% off for first-time users",
-        "features": [
-          "Access to certified veterinarians",
-          "Unlimited consultation booking",
-          "Limited vet recommendations"
-        ],
-        "duration": "Monthly",
-        "renewal": "Auto-renewal (optional)"
-      },
-      "Elite Plan": {
-        "price": "Ksh 15,000/year",
-        "discount": "20% off for long-term subscribers",
-        "features": [
-          "Unlimited vet consultations",
-          "Personalized vet support",
-          "Access to premium veterinary insights"
-        ],
-        "duration": "1 year",
-        "renewal": "Auto-renewal (optional)"
-      }
-    },
-    {
-      "icon": "fa fa-shopping-cart",
-      "service": "AgrovetHub",
-      "Basic Plan": {
-        "price": "Ksh 2,000/month",
-        "discount": "5% off on first purchase",
-        "features": [
-          "Access to agrovet product listings",
-          "Basic supplier connections",
-          "Limited product recommendations"
-        ],
-        "duration": "Monthly",
-        "renewal": "Auto-renewal (optional)"
-      },
-      "Elite Plan": {
-        "price": "Ksh 18,000/year",
-        "discount": "15% off on all orders",
-        "features": [
-          "Unlimited supplier connections",
-          "Premium customer support",
-          "Personalized agrovet product recommendations"
-        ],
-        "duration": "1 year",
-        "renewal": "Auto-renewal (optional)"
-      }
-    },
-    {
-      "icon": "fa fa-database",
-      "service": "FarmHub",
-      "Basic Plan": {
-        "price": "Ksh 3,500/month",
-        "discount": "5% off for first-time users",
-        "features": [
-          "Basic farm product listings",
-          "Limited supplier connections",
-          "Farm equipment rental options"
-        ],
-        "duration": "Monthly",
-        "renewal": "Auto-renewal (optional)"
-      },
-      "Elite Plan": {
-        "price": "Ksh 30,000/year",
-        "discount": "20% off for long-term subscribers",
-        "features": [
-          "Unlimited supplier connections",
-          "Premium farm consultations",
-          "Exclusive farm product deals"
-        ],
-        "duration": "1 year",
-        "renewal": "Auto-renewal (optional)"
-      }
-    }
+    "text": "Find and order quality agrovet products such as vaccines, animal feeds, and supplements from verified suppliers."
+  }
 ],
 
 "Testimonials": [
@@ -131,36 +42,13 @@
     }
 ],
 
-"Team": [
-    {
-      "img": "img/team/josphine.png",
-      "name": "Josphine Otieno, BA. Community Development",
-      "job": "Founder & Director – Leading Vet Mashinani’s vision to improve veterinary access for farmers, fostering partnerships, and ensuring impactful service delivery."
-    },
-    {
-      "img": "img/team/kasuku.png",
-      "name": "Michael Kasuku, BSc. Computer Science",
-      "job": "Lead Software Engineer – Designing and developing the Vet Mashinani platform to provide seamless farmer-veterinarian connections and efficient service delivery."
-    },
-    {
-      "img": "img/team/daisy.png",
-      "name": "Daisy Lopez, BSc. Information Technology",
-      "job": "Chief Technology Officer (CTO) – Overseeing system scalability, optimizing platform performance, and driving technical innovation for Vet Mashinani."
-    },
-    {
-      "img": "img/team/mugambi.png",
-      "name": "Brian Mugambi, BSc. Computer Science",
-      "job": "Cybersecurity & IT Infrastructure Lead – Ensuring data security, maintaining system integrity, and safeguarding Vet Mashinani’s digital platform."
-    }
-],
-
 "Contact": {
-  "address": "Kisumu, Kenya",
+  "address": "Nairobi, Kenya",
   "phone": "+254741392099",
   "email": "vetmashinani@gmail.com",
   "facebook": "https://www.facebook.com/vetmashinani",
   "x": "https://x.com/vetmashinani",
-  "linkedin": "https://www.linkedin.com/company/vetmashinani",
+  "linkedin": "https://www.linkedin.com/company/vet-mashinani/",
   "instagram": "https://www.instagram.com/vetmashinani",
   "youtube": "https://www.youtube.com/@vetmashinani"
 }

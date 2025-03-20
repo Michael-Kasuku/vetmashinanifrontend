@@ -139,7 +139,7 @@ hr {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
-  color: #5ca9fb;
+  color:#ffb300;
 }
 
 .navbar-default .navbar-nav > .active > a::after {
@@ -154,7 +154,7 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: #ffb300;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -162,7 +162,7 @@ hr {
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #608dfd;
+  background-color: #ffb300;
 }
 
 /* Section Titles */
@@ -186,7 +186,7 @@ hr {
   bottom: 0;
   width: 60px;
   height: 4px;
-  background: linear-gradient(to right, #5ca9fb, #6372ff);
+  background: linear-gradient(to right, #ffb300, #ffb300);
   transform: translateX(-50%);
 }
 
@@ -297,7 +297,7 @@ header .intro-text {
 #about h2::after {
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+  background: linear-gradient(to right, #ffb300 0%, #ffb300 100%);
   height: 5px;
   width: 100px;
   bottom: 0;
@@ -409,7 +409,7 @@ header .intro-text {
   content: "";
   width: 80px;
   height: 4px;
-  background: rgba(255, 255, 255, 0.5);
+  background: #ffb300;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -445,7 +445,7 @@ header .intro-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #6372ff, #5ca9fb);
+  background: linear-gradient(to right, #ffb300, #ffb300);
   border-radius: 50%;
   color: #fff;
   margin: 0 auto 20px;
@@ -468,224 +468,6 @@ header .intro-text {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-}
-
-/* ============================= */
-/*          PRICING SECTION      */
-/* ============================= */
-
-#pricing {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  padding: 90px 0;
-  text-align: center;
-}
-
-/* Section Title */
-#pricing .section-title h2 {
-  font-size: 2.8rem;
-  color: #1d1d1d;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-#pricing .section-title p {
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 35px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* ============================= */
-/*         CARD STYLING          */
-/* ============================= */
-
-#pricing .card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
-  overflow: hidden;
-  padding: 30px;
-  margin: 20px;
-  transition: all 0.4s ease-in-out;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  position: relative;
-}
-
-#pricing .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* Featured Plan */
-#pricing .card.featured {
-  border: 2px solid #007bff;
-}
-
-#pricing .card.featured::before {
-  content: "Recommended";
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #007bff;
-  color: #fff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 12px;
-}
-
-/* Card Icon */
-#pricing .card-body i {
-  color: #007bff;
-  font-size: 2.2rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-#pricing .card:hover .card-body i {
-  transform: scale(1.15);
-  color: #0056b3;
-}
-
-/* Plan Title */
-#pricing .card-title {
-  font-size: 1.9rem;
-  color: #222;
-  font-weight: 800;
-  margin-bottom: 18px;
-}
-
-/* Pricing Details */
-#pricing h5 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: #28a745;
-  margin-bottom: 10px;
-}
-
-#pricing p {
-  font-size: 1.1rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* ============================= */
-/*        FEATURES LIST          */
-/* ============================= */
-
-#pricing .list-group {
-  margin-top: 18px;
-}
-
-#pricing .list-group-item {
-  font-size: 1.05rem;
-  color: #333;
-  background: transparent;
-  border: none;
-  padding: 12px 0;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease-in-out;
-}
-
-#pricing .list-group-item::before {
-  content: "✔";
-  color: #28a745;
-  font-weight: bold;
-  margin-right: 12px;
-}
-
-#pricing .list-group-item:hover {
-  color: #007bff;
-}
-
-/* ============================= */
-/*        BUTTON STYLING         */
-/* ============================= */
-
-#pricing .btn-pricing {
-  background: #007bff;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  padding: 12px 25px;
-  border-radius: 8px;
-  display: inline-block;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 20px;
-}
-
-#pricing .btn-pricing:hover {
-  background: #0056b3;
-  transform: scale(1.05);
-}
-
-/* ============================= */
-/*       RESPONSIVE DESIGN       */
-/* ============================= */
-
-@media (max-width: 992px) {
-  #pricing {
-    padding: 75px 0;
-  }
-
-  #pricing .section-title h2 {
-    font-size: 2.5rem;
-  }
-
-  #pricing .card-title {
-    font-size: 1.7rem;
-  }
-
-  #pricing h5 {
-    font-size: 1.3rem;
-  }
-
-  #pricing p {
-    font-size: 1rem;
-  }
-
-  #pricing .btn-pricing {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #pricing {
-    padding: 65px 0;
-  }
-
-  #pricing .section-title h2 {
-    font-size: 2.2rem;
-  }
-
-  #pricing .card {
-    padding: 20px;
-    margin: 15px;
-  }
-
-  #pricing .card-title {
-    font-size: 1.6rem;
-  }
-
-  #pricing h5 {
-    font-size: 1.2rem;
-  }
-
-  #pricing p {
-    font-size: 0.95rem;
-  }
-
-  #pricing .btn-pricing {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
 }
 
 /* Testimonials Section */
@@ -729,176 +511,6 @@ header .intro-text {
   color: #666;
 }
 
-/* Team Section */
-#team {
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-  text-align: center;
-}
-
-#team h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #222;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-}
-
-#team h2::after {
-  content: "";
-  width: 60px;
-  height: 4px;
-  background: #007bff;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-/* Team Grid Layout */
-#team .team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#team .team-member {
-  background: #fff;
-  border-radius: 12px;
-  padding: 25px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  text-align: center;
-}
-
-#team .team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-#team .team-img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.4s ease, box-shadow 0.3s ease;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-#team .team-img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-#team h4 {
-  margin: 12px 0 5px;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #333;
-}
-
-#team .team-role {
-  font-size: 1.1rem;
-  color: #666;
-  font-style: italic;
-}
-
-/* Social Icons */
-#team .social-icons {
-  margin-top: 15px;
-}
-
-#team .social-icons a {
-  display: inline-block;
-  margin: 0 8px;
-  color: #007bff;
-  font-size: 1.3rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#team .social-icons a:hover {
-  color: #0056b3;
-  transform: scale(1.1);
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  #team {
-    padding: 80px 0;
-  }
-  #team h2 {
-    font-size: 2.4rem;
-  }
-  #team .team-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-  #team .team-img {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  #team {
-    padding: 60px 0;
-  }
-  #team h2 {
-    font-size: 2rem;
-  }
-  #team .team-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  #team .team-img {
-    width: 160px;
-    height: 160px;
-  }
-  #team .team-member {
-    padding: 15px;
-  }
-  #team h4 {
-    font-size: 1.2rem;
-  }
-  #team .team-role {
-    font-size: 1rem;
-  }
-  #team .social-icons a {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #team {
-    padding: 40px 0;
-  }
-  #team h2 {
-    font-size: 1.8rem;
-  }
-  #team .team-img {
-    width: 140px;
-    height: 140px;
-  }
-  #team .team-member {
-    padding: 12px;
-  }
-  #team h4 {
-    font-size: 1rem;
-  }
-  #team .team-role {
-    font-size: 0.9rem;
-  }
-  #team .social-icons a {
-    font-size: 1rem;
-    margin: 0 5px;
-  }
-}
-
 /* =========================
    Contact Section
 ========================= */
@@ -973,7 +585,7 @@ header .intro-text {
 #contact .section-title h2::after {
   content: "";
   position: absolute;
-  background: #3182CE;
+  background: #ffb300;
   height: 4px;
   width: 80px;
   bottom: 0;
@@ -987,66 +599,6 @@ header .intro-text {
   color: #4a5568;
   opacity: 0.9;
   margin-top: 10px;
-}
-
-/* Contact Form */
-#contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 30px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-#contact form:hover {
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-}
-
-label {
-  font-size: 16px;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-  display: block;
-  margin-bottom: 8px;
-  color: #2d3748;
-}
-
-#contact .form-control {
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  border: 2px solid #CBD5E0;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  outline: none;
-}
-
-#contact .form-control:focus {
-  border-color: #3182CE;
-  box-shadow: 0 0 12px rgba(49, 130, 206, 0.4);
-}
-
-/* Submit Button */
-#contact .btn-custom {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 30px;
-  font-size: 18px;
-  font-weight: 700;
-  background: #3182CE;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-#contact .btn-custom:hover {
-  background: #2a4365;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Social Icons */
@@ -1069,8 +621,8 @@ label {
   width: 50px;
   height: 50px;
   padding: 12px;
-  border: 2px solid #3182CE;
-  color: #3182CE;
+  border: 2px solid #ffb300;
+  color: #ffb300;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -1079,10 +631,10 @@ label {
 }
 
 #contact .social i.fa:hover {
-  background: #3182CE;
+  background: #ffb300;
   color: #ffffff;
   transform: scale(1.1);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px #ffb300;
 }
 
 /* Responsive Design */
@@ -1127,13 +679,13 @@ label {
 
 /* Footer Section */
 #footer {
-  background: #1a202c;
+  background: #fff;
   padding: 30px 0;
   text-align: center;
 }
 
 #footer p {
-  color: #ffffff;
+  color: #ffb300;
   font-size: 14px;
   margin: 0;
 }

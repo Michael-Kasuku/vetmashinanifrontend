@@ -4,9 +4,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { ServicesComponent } from './services/services.component';
-import { PricingComponent } from './pricing/pricing.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
-import { TeamComponent } from './team/team.component';
 import { ContactComponent } from './contact/contact.component';
 
 @Component({
@@ -16,9 +14,7 @@ import { ContactComponent } from './contact/contact.component';
     HeaderComponent,
     AboutComponent,
     ServicesComponent,
-    PricingComponent,
     TestimonialsComponent,
-    TeamComponent,
     ContactComponent
   ],
   templateUrl: './app.component.html',
