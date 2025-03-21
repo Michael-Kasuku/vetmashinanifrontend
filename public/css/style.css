@@ -111,7 +111,7 @@ hr {
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
-  color: #ffb300;
+  color: #3182CE;
   font-size: 15px;
   font-weight: 400;
   padding: 10px 5px;
@@ -139,7 +139,7 @@ hr {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   background-color: transparent;
-  color:#ffb300;
+  color:#3182CE;
 }
 
 .navbar-default .navbar-nav > .active > a::after {
@@ -516,52 +516,6 @@ header .intro-text {
 ========================= */
 #contact {
   padding: 100px 0;
-  background: url('/img/contact.png') no-repeat center center;
-  background-size: cover;
-  color: #1a202c;
-  text-align: center;
-}
-
-/* Section Title */
-#contact .section-title {
-  margin-bottom: 50px;
-}
-
-#contact .section-title h2 {
-  color: #2d3748;
-  font-size: 32px;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-#contact .section-title h2::after {
-  content: "";
-  position: absolute;
-  background: #3182CE;
-  height: 4px;
-  width: 80px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 2px;
-}
-
-#contact .section-title p {
-  font-size: 18px;
-  color: #4a5568;
-  opacity: 0.9;
-  margin-top: 10px;
-}
-
-/* =========================
-   Contact Section
-========================= */
-#contact {
-  padding: 100px 0;
   background: #f7fafc;
   color: #1a202c;
   text-align: center;
@@ -622,8 +576,8 @@ header .intro-text {
   width: 50px;
   height: 50px;
   padding: 12px;
-  border: 2px solid #ffb300;
-  color: #ffb300;
+  border: 2px solid #3182CE;
+  color: #3182CE;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -632,10 +586,10 @@ header .intro-text {
 }
 
 #contact .social i.fa:hover {
-  background: #ffb300;
+  background:#3182CE;
   color: #ffffff;
   transform: scale(1.1);
-  box-shadow: 0 3px 8px #ffb300;
+  box-shadow: 0 3px 8px #3182CE;
 }
 
 /* Responsive Design */
@@ -680,13 +634,13 @@ header .intro-text {
 
 /* Footer Section */
 #footer {
-  background: #fff;
+  background: #000;
   padding: 30px 0;
   text-align: center;
 }
 
 #footer p {
-  color: #ffb300;
+  color: #fff;
   font-size: 14px;
   margin: 0;
 }
