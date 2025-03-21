@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import emailjs from 'emailjs-com';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; 
 

@@ -1,0 +1,85 @@
+<div class="signup-container">
+    <mat-card class="signup-card">
+      <mat-card-header>
+        <mat-card-title class="title">Register</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="handleSubmit($event)">
+          <!-- Username -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Username</mat-label>
+            <input matInput
+                   type="text"
+                   name="Username"
+                   [(ngModel)]="formData.Username"
+                   placeholder="e.g., williamruto"
+                   required />
+          </mat-form-field>
+  
+          <!-- Location Field with Autocomplete -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Location</mat-label>
+            <input matInput
+                   type="text"
+                   name="Location"
+                   [(ngModel)]="formData.Location"
+                   [matAutocomplete]="auto"
+                   (input)="fetchLocations(formData.Location)"
+                   placeholder="Search for a location"
+                   required />
+            
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectLocation($event)">
+              <mat-option *ngFor="let location of locationOptions" [value]="location.name">
+                {{ location.name }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>  
+  
+          <!-- Email -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email Address</mat-label>
+            <input matInput
+                   type="email"
+                   name="Email"
+                   [(ngModel)]="formData.Email"
+                   placeholder="e.g., vet@mashinani.com"
+                   required />
+          </mat-form-field>
+  
+          <!-- Password -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput
+                   type="password"
+                   name="PasswordHash"
+                   [(ngModel)]="formData.PasswordHash"
+                   placeholder="Enter a secure password"
+                   required />
+          </mat-form-field>
+  
+          <!-- Confirm Password -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput
+                   type="password"
+                   name="ConfirmPassword"
+                   [(ngModel)]="formData.ConfirmPassword"
+                   placeholder="Re-enter your password"
+                   required />
+          </mat-form-field>
+  
+          <!-- Submit Button -->
+          <div class="form-group text-center">
+            <button mat-raised-button class="btn btn-primary signup-btn" color="primary" type="submit">
+              Create Account
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+  
+      <!-- Login Link -->
+      <div class="text-center link text-primary">
+        Already have an account? <a href="http://localhost:4200/farmer/login">Login</a>
+      </div>
+    </mat-card>
+  </div>
