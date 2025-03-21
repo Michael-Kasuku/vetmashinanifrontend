@@ -516,7 +516,8 @@ header .intro-text {
 ========================= */
 #contact {
   padding: 100px 0;
-  background: #f7fafc;
+  background: url('/img/contact.png') no-repeat center center;
+  background-size: cover;
   color: #1a202c;
   text-align: center;
 }
