@@ -1,1 +1,37 @@
-<p>farmer-forgot works!</p>
+<div class="forgot-container">
+    <mat-card class="forgot-card">
+      <mat-card-header>
+        <mat-card-title class="title">Forgot Password</mat-card-title>
+        <mat-card-subtitle class="subtitle">
+          Enter your email address to reset your password.
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="handlePasswordReset($event)">
+          <!-- Email -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Email Address</mat-label>
+            <input matInput
+                   type="email"
+                   name="Email"
+                   [(ngModel)]="formData.Email"
+                   placeholder="e.g., farmer@mashinani.com"
+                   required />
+          </mat-form-field>
+  
+          <!-- Submit Button -->
+          <div class="form-group text-center">
+            <button class="btn btn-primary" type="submit">
+              Send Reset Link
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+  
+      <!-- Links for Login -->
+      <div class="text-center link-container">
+        <a href="https://www.vetmashinani.com/farmer/login" class="link">Back to Login</a>
+      </div>
+    </mat-card>
+  </div>
+  
