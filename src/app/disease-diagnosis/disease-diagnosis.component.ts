@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; // Import progress spinner
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-disease-diagnosis',
@@ -23,7 +25,8 @@ import { map, startWith } from 'rxjs/operators';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatProgressSpinnerModule // Add module here
+    MatProgressSpinnerModule,
+    MatSnackBarModule
   ],
   templateUrl: './disease-diagnosis.component.html',
   styleUrl: './disease-diagnosis.component.scss',
@@ -56,7 +59,7 @@ export class DiseaseDiagnosisComponent {
     "ulcers", "vomiting", "weight loss", "weakness"
   ];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {
     this.filteredSymptoms = this.symptomControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value || ''))
@@ -91,10 +94,11 @@ export class DiseaseDiagnosisComponent {
     this.http.post('http://127.0.0.1:8000/diagnosis/predict/', body, { headers }).subscribe(
       response => {
         this.diagnosisResult = response;
+        this.openSnackbar('Diagnosis Successful!','success');
         this.loading = false; // Hide progress spinner
       },
       error => {
-        console.error('Error:', error);
+        this.openSnackbar('Oops! Couldn\'t Perform Diagnosis.','error');
         this.loading = false; // Hide progress spinner
       }
     );
@@ -103,5 +107,17 @@ export class DiseaseDiagnosisComponent {
   formatDiseaseName(disease: string): string {
     if (!disease) return '';
     return disease.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+  }
+
+  openSnackbar(message: string, severity: 'success' | 'error') {
+    const snackBarClass = severity === 'success' ? 'snackbar-success' : 'snackbar-error';
+    this.snackBar.open(message, 'Close', {
+      duration: 3000,
+      panelClass: snackBarClass,
+    });
+  }
+
+  closeSnackbar() {
+    this.snackBar.dismiss();
   }
 }

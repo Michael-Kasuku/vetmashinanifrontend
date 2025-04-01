@@ -1,26 +1,41 @@
 {
     "Header": {
-      "paragraph": "Vet Mashinani is a digital platform designed to connect certified veterinarians with farmers in rural areas, ensuring improved access to livestock healthcare."
-    },
-    "About": {
-      "paragraph": "Many small-scale farmers struggle to get timely veterinary services, leading to preventable diseases and significant economic losses. Vet Mashinani bridges this gap by enabling farmers to book veterinary visits, access telemedicine consultations, and receive AI-driven disease diagnoses based on reported symptoms."
-    },
+  "paragraph": "Vet Mashinani connects you with certified veterinarians for on-demand visits, telemedicine consultations, and AI-driven cattle disease diagnosis—right at your fingertips. Need veterinary medicines? Explore AgrovetHub, our trusted marketplace for quality supplies. Plus, discover JobVibe for career advancement with tailored job, internship, and scholarship opportunities. Enhance your skills with EduContent, a hub for educational resources and expert guides."
+},
+"About": {
+  "paragraph": "At Vet Mashinani, we bridge the gap between rural farmers and certified veterinarians, ensuring timely livestock healthcare through in-person visits, telemedicine consultations, and AI-powered disease diagnosis. Through AgrovetHub, we connect farmers with trusted suppliers for high-quality veterinary medicines, vaccines, and farm essentials. We also empower aspiring professionals through JobVibe, a dedicated platform offering job, internship, and scholarship opportunities across various industries to advance careers. Additionally, EduContent provides educational resources, training programs, and expert guides to enhance livestock management and farming knowledge."
+},
 
 "Services": [
   {
+    "icon": "fa fa-home",
+    "name": "In-Person Vet Visits",
+    "text": "Schedule certified veterinarians for on-site visits to provide hands-on care and treatment for your livestock."
+  },
+  {
     "icon": "fa fa-user-md",
     "name": "TeleVet Consultations",
-    "text": "Access remote veterinary consultations via video calls or chat, ensuring timely medical advice for your livestock."
+    "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment."
   },
   {
     "icon": "fa fa-stethoscope",
     "name": "AI Disease Diagnosis",
-    "text": "Get AI-driven disease diagnosis based on reported symptoms, helping you detect and manage livestock illnesses early."
+    "text": "Utilize AI-driven diagnostics to detect and manage cattle diseases early based on reported symptoms and data."
   },
   {
     "icon": "fa fa-shopping-cart",
     "name": "AgrovetHub",
-    "text": "Find and order quality agrovet products such as vaccines, animal feeds, and supplements from verified suppliers."
+    "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers."
+  },
+  {
+    "icon": "fa fa-briefcase",
+    "name": "JobVibe",
+    "text": "Explore job, internship, and scholarship opportunities across various industries to advance your career."
+  },
+  {
+    "icon": "fa fa-book",
+    "name": "EduContent",
+    "text": "Access educational resources, training programs, and expert guides to enhance your livestock management and farming knowledge."
   }
 ],
 
