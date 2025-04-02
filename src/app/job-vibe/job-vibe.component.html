@@ -1,1 +1,32 @@
-<p>JobVibe coming soon!</p>
+<div class="job-vibe-container">
+  <div class="search-box">
+      <input 
+          type="text" 
+          [(ngModel)]="searchPhrase" 
+          placeholder="🔍 Search jobs, internships, scholarships..." 
+          class="search-input"
+      />
+      <button (click)="searchOpportunities()" class="search-button">Search</button>
+  </div>
+  
+  <div *ngIf="isLoading" class="loading">
+    <span class="loader"></span>
+    <p>Searching, please wait...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    ❌ {{ errorMessage }}
+  </div>
+
+  <div *ngIf="results.length > 0" class="results">
+    <div *ngFor="let result of results" class="result-item">
+      <h3>{{ result.title }}</h3>
+      <p class="result-description">{{ result.description }}</p>
+      <a [href]="result.url" target="_blank" class="view-button">View Opportunity</a>
+    </div>
+  </div>
+  
+  <div *ngIf="results.length === 0 && !isLoading && !errorMessage" class="no-results">
+    😞 No relevant opportunities found.
+  </div>
+</div>
