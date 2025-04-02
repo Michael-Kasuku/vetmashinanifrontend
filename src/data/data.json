@@ -11,37 +11,37 @@
     "icon": "fa fa-home",
     "name": "In-Person Vet Visits",
     "text": "Schedule certified veterinarians for on-site visits to provide hands-on care and treatment for your livestock.",
-    "url": "http://localhost:4200/farmer/appointments"
+    "url": "https://www.vetmashinani.com/farmer/appointments"
   },
   {
     "icon": "fa fa-user-md",
     "name": "TeleVet Consultations",
     "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment.",
-    "url": "http://localhost:4200/farmer/televet"
+    "url": "https://www.vetmashinani.com/farmer/televet"
   },
   {
     "icon": "fa fa-stethoscope",
     "name": "AI Disease Diagnosis",
     "text": "Utilize AI-driven diagnostics to detect and manage cattle diseases early based on reported symptoms and data.",
-    "url": "http://localhost:4200/disease/diagnosis"
+    "url": "https://www.vetmashinani.com/disease/diagnosis"
   },
   {
     "icon": "fa fa-shopping-cart",
     "name": "AgrovetHub",
     "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers.",
-    "url": "http://localhost:4200/agrovet/hub"
+    "url": "https://www.vetmashinani.com/agrovet/hub"
   },
   {
     "icon": "fa fa-briefcase",
     "name": "JobVibe",
     "text": "Explore job, internship, and scholarship opportunities across various industries to advance your career.",
-    "url": "http://localhost:4200/job/vibe"
+    "url": "https://www.vetmashinani.com/job/vibe"
   },
   {
     "icon": "fa fa-book",
     "name": "EduContent",
     "text": "Access educational resources, training programs, and expert guides to enhance your livestock management and farming knowledge.",
-    "url": "http://localhost:4200/edu/content"
+    "url": "https://www.vetmashinani.com/edu/content"
   }
 ],
 

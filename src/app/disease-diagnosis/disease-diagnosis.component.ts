@@ -91,7 +91,7 @@ export class DiseaseDiagnosisComponent {
     const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
     const body = this.symptoms.map(symptom => `symptoms[]=${encodeURIComponent(symptom)}`).join('&');
 
-    this.http.post('http://127.0.0.1:8000/vetmashinani/predict/', body, { headers }).subscribe(
+    this.http.post('https://michaelotienokasuku.pythonanywhere.com/vetmashinani/predict/', body, { headers }).subscribe(
       response => {
         this.diagnosisResult = response;
         this.openSnackbar('Diagnosis Successful!','success');
