@@ -59,7 +59,7 @@ p.intro {
 
 /* Links */
 a {
-  color: #0056b3; /* More professional blue */
+  color: #ffb300;
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
@@ -67,7 +67,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #003d80; /* Darker on hover */
+  color: #ffb300;
   text-decoration: underline;
 }
 
@@ -111,7 +111,7 @@ hr {
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
-  color: #3182CE;
+  color: #ffb300;
   font-size: 15px;
   font-weight: 400;
   padding: 10px 5px;
@@ -576,8 +576,8 @@ header .intro-text {
   width: 50px;
   height: 50px;
   padding: 12px;
-  border: 2px solid #3182CE;
-  color: #3182CE;
+  border: 2px solid #ffb300;
+  color: #ffb300;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
   display: flex;
@@ -586,10 +586,10 @@ header .intro-text {
 }
 
 #contact .social i.fa:hover {
-  background:#3182CE;
+  background:#ffb300;
   color: #ffffff;
   transform: scale(1.1);
-  box-shadow: 0 3px 8px #3182CE;
+  box-shadow: 0 3px 8px #ffb300;
 }
 
 /* Responsive Design */

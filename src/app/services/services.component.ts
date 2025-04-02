@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent {
-  @Input() data: { name: string; icon: string; text: string }[] | null = null;
+  @Input() data: { url: string; name: string; icon: string; text: string }[] | null = null;
 }

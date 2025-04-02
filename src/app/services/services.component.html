@@ -1,20 +1,21 @@
 <div id="services" class="text-center">
-    <div class="container">
-      <div class="section-title">
-        <h2>Our Services</h2>
-      </div>
-      <div class="row">
-        <ng-container *ngIf="data; else loading">
-          <div *ngFor="let d of data; let i = index" class="col-md-4">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Services</h2>
+    </div>
+    <div class="row">
+      <ng-container *ngIf="data; else loading">
+        <div *ngFor="let d of data; let i = index" class="col-md-4">
+          <a [href]="d.url">
             <i [class]="d.icon"></i>
             <div class="service-desc">
               <h3>{{ d.name }}</h3>
               <p>{{ d.text }}</p>
             </div>
-          </div>
-        </ng-container>
-        <ng-template #loading>Loading...</ng-template>
-      </div>
+          </a>
+        </div>
+      </ng-container>
+      <ng-template #loading>Loading...</ng-template>
     </div>
+  </div>
 </div>
-  

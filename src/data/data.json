@@ -1,65 +1,53 @@
 {
     "Header": {
-  "paragraph": "Vet Mashinani connects you with certified veterinarians for on-demand visits, telemedicine consultations, and AI-driven cattle disease diagnosis—right at your fingertips. Need veterinary medicines? Explore AgrovetHub, our trusted marketplace for quality supplies. Plus, discover JobVibe for career advancement with tailored job, internship, and scholarship opportunities. Enhance your skills with EduContent, a hub for educational resources and expert guides."
+  "paragraph": "Vet Mashinani connects you with certified veterinarians for on-demand visits, telemedicine consultations, and AI-driven cattle disease diagnosis—right at your fingertips."
 },
 "About": {
-  "paragraph": "At Vet Mashinani, we bridge the gap between rural farmers and certified veterinarians, ensuring timely livestock healthcare through in-person visits, telemedicine consultations, and AI-powered disease diagnosis. Through AgrovetHub, we connect farmers with trusted suppliers for high-quality veterinary medicines, vaccines, and farm essentials. We also empower aspiring professionals through JobVibe, a dedicated platform offering job, internship, and scholarship opportunities across various industries to advance careers. Additionally, EduContent provides educational resources, training programs, and expert guides to enhance livestock management and farming knowledge."
+  "paragraph": "At Vet Mashinani, we bridge the gap between rural farmers and certified veterinarians, ensuring timely livestock healthcare through in-person visits, telemedicine consultations, and AI-powered disease diagnosis."
 },
 
 "Services": [
   {
     "icon": "fa fa-home",
     "name": "In-Person Vet Visits",
-    "text": "Schedule certified veterinarians for on-site visits to provide hands-on care and treatment for your livestock."
+    "text": "Schedule certified veterinarians for on-site visits to provide hands-on care and treatment for your livestock.",
+    "url": "http://localhost:4200/farmer/appointments"
   },
   {
     "icon": "fa fa-user-md",
     "name": "TeleVet Consultations",
-    "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment."
+    "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment.",
+    "url": "http://localhost:4200/farmer/televet"
   },
   {
     "icon": "fa fa-stethoscope",
     "name": "AI Disease Diagnosis",
-    "text": "Utilize AI-driven diagnostics to detect and manage cattle diseases early based on reported symptoms and data."
+    "text": "Utilize AI-driven diagnostics to detect and manage cattle diseases early based on reported symptoms and data.",
+    "url": "http://localhost:4200/disease/diagnosis"
   },
   {
     "icon": "fa fa-shopping-cart",
     "name": "AgrovetHub",
-    "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers."
+    "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers.",
+    "url": "http://localhost:4200/agrovet/hub"
   },
   {
     "icon": "fa fa-briefcase",
     "name": "JobVibe",
-    "text": "Explore job, internship, and scholarship opportunities across various industries to advance your career."
+    "text": "Explore job, internship, and scholarship opportunities across various industries to advance your career.",
+    "url": "http://localhost:4200/job/vibe"
   },
   {
     "icon": "fa fa-book",
     "name": "EduContent",
-    "text": "Access educational resources, training programs, and expert guides to enhance your livestock management and farming knowledge."
+    "text": "Access educational resources, training programs, and expert guides to enhance your livestock management and farming knowledge.",
+    "url": "http://localhost:4200/edu/content"
   }
-],
-
-"Testimonials": [
-    {
-      "img": "img/testimonials/rupra.png",
-      "text": "\"Vet Mashinani has revolutionized how we provide veterinary services. Their platform seamlessly connects farmers with certified veterinarians, ensuring timely and effective animal healthcare.\"",
-      "name": "Dr. Rupra Singh"
-    },
-    {
-      "img": "img/testimonials/odoyo.png",
-      "text": "\"Thanks to Vet Mashinani, accessing quality veterinary services has never been easier. Their user-friendly platform and dedicated support team have made a significant impact on our practice.\"",
-      "name": "Dr. Collins Odoyo"
-    },
-    {
-      "img": "img/testimonials/ricardo.png",
-      "text": "\"Vet Mashinani is a game-changer for livestock farmers. The ability to consult experienced vets remotely and get real-time advice has greatly improved animal health and productivity.\"",
-      "name": "Mr. Ricardo Seda"
-    }
 ],
 
 "Contact": {
   "address": "Nairobi, Kenya",
-  "phone": "+254741392099",
+  "phone": "+254712345678",
   "email": "vetmashinani@gmail.com",
   "facebook": "https://www.facebook.com/vetmashinani",
   "x": "https://x.com/vetmashinani",
