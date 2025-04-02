@@ -49,7 +49,7 @@ export class JobVibeComponent {
 
   // HTTP call to the backend API
   fetchOpportunities(searchPhrase: string): Observable<any> {
-    const apiUrl = `https://michaelotienokasuku.pythonanywhere.com/jobvibe/?search_phrase=${encodeURIComponent(searchPhrase)}`;
+    const apiUrl = `https://michaelotienokasuku.pythonanywhere.com/vetmashinani/jobvibe/?search_phrase=${encodeURIComponent(searchPhrase)}`;
     return this.http.get<any>(apiUrl);
   }
 }
