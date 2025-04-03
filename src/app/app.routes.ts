@@ -9,6 +9,7 @@ import { TeleVetComponent } from './tele-vet/tele-vet.component';
 import { AgrovetHubComponent } from './agrovet-hub/agrovet-hub.component';
 import { JobVibeComponent } from './job-vibe/job-vibe.component';
 import { EduContentComponent } from './edu-content/edu-content.component';
+import { VetDashboardComponent } from './vet-dashboard/vet-dashboard.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -21,6 +22,5 @@ export const routes: Routes = [
     { path: 'agrovet/hub', component: AgrovetHubComponent },
     { path: 'job/vibe', component: JobVibeComponent },
     { path: 'edu/content', component: EduContentComponent },
-
-    
+    { path: 'vet/dashboard', component: VetDashboardComponent }, 
 ];
