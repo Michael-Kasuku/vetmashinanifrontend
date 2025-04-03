@@ -5,10 +5,11 @@
           [(ngModel)]="searchPhrase" 
           placeholder="🔍 Search jobs, internships, scholarships..." 
           class="search-input"
+          (input)="onInputChange()"
       />
       <button (click)="searchOpportunities()" class="search-button">Search</button>
   </div>
-  
+
   <div *ngIf="isLoading" class="loading">
     <span class="loader"></span>
     <p>Searching, please wait...</p>
@@ -16,6 +17,15 @@
 
   <div *ngIf="errorMessage" class="error-message">
     ❌ {{ errorMessage }}
+  </div>
+
+  <!-- Autocomplete suggestions -->
+  <div *ngIf="filteredSuggestions.length > 0" class="autocomplete-suggestions">
+    <ul>
+      <li *ngFor="let suggestion of filteredSuggestions" (click)="selectSuggestion(suggestion)">
+        {{ suggestion }}
+      </li>
+    </ul>
   </div>
 
   <div *ngIf="results.length > 0" class="results">

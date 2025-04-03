@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs'
+import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; 
 
 @Component({
   selector: 'app-job-vibe',
-  standalone:true,
+  standalone: true,
   imports: [
     CommonModule,
     FormsModule
@@ -19,6 +19,19 @@ export class JobVibeComponent {
   results: any[] = [];
   isLoading: boolean = false;
   errorMessage: string = '';
+  suggestions: string[] = [
+    "computer",
+    "software",
+    "scholarship",
+    "grant",
+    "job",
+    "remote",
+    "opportunities",
+    "internship",
+    "technology",
+    "developer"
+  ];
+  filteredSuggestions: string[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -51,5 +64,19 @@ export class JobVibeComponent {
   fetchOpportunities(searchPhrase: string): Observable<any> {
     const apiUrl = `https://michaelotienokasuku.pythonanywhere.com/vetmashinani/jobvibe/?search_phrase=${encodeURIComponent(searchPhrase)}`;
     return this.http.get<any>(apiUrl);
+  }
+
+  // Handle input change and filter the suggestions
+  onInputChange(): void {
+    this.filteredSuggestions = this.suggestions.filter(suggestion =>
+      suggestion.toLowerCase().includes(this.searchPhrase.toLowerCase())
+    );
+  }
+
+  // Select a suggestion from the autocomplete list
+  selectSuggestion(suggestion: string): void {
+    this.searchPhrase = suggestion;
+    this.filteredSuggestions = [];
+    this.searchOpportunities();
   }
 }
