@@ -1,42 +1,50 @@
-<div class="job-vibe-container">
-  <div class="search-box">
+<header class="search-header bg-white shadow-sm fixed-top py-3">
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="search-box d-flex align-items-center gap-3 w-100">
+      <img src="/img/vetmashinani.ico" alt="Vet Mashinani Icon" class="search-icon" />
       <input 
-          type="text" 
-          [(ngModel)]="searchPhrase" 
-          placeholder="🔍 Search jobs, internships, scholarships..." 
-          class="search-input"
-          (input)="onInputChange()"
+        type="text" 
+        [(ngModel)]="searchPhrase" 
+        placeholder="Search jobs, internships, scholarships..." 
+        class="form-control search-input" 
       />
-      <button (click)="searchOpportunities()" class="search-button">Search</button>
-  </div>
-
-  <div *ngIf="isLoading" class="loading">
-    <span class="loader"></span>
-    <p>Searching, please wait...</p>
-  </div>
-
-  <div *ngIf="errorMessage" class="error-message">
-    ❌ {{ errorMessage }}
-  </div>
-
-  <!-- Autocomplete suggestions -->
-  <div *ngIf="filteredSuggestions.length > 0" class="autocomplete-suggestions">
-    <ul>
-      <li *ngFor="let suggestion of filteredSuggestions" (click)="selectSuggestion(suggestion)">
-        {{ suggestion }}
-      </li>
-    </ul>
-  </div>
-
-  <div *ngIf="results.length > 0" class="results">
-    <div *ngFor="let result of results" class="result-item">
-      <h3>{{ result.title }}</h3>
-      <p class="result-description">{{ result.description }}</p>
-      <a [href]="result.url" target="_blank" class="view-button">View Opportunity</a>
+      <button (click)="searchOpportunities()" class="btn btn-primary d-flex align-items-center justify-content-center">
+        Search
+      </button>
     </div>
   </div>
-  
-  <div *ngIf="results.length === 0 && !isLoading && !errorMessage" class="no-results">
-    😞 No relevant opportunities found.
-  </div>
-</div>
+</header>
+
+<main class="pt-5">
+  <section class="results-section py-4">
+    <div class="job-vibe-container mx-auto bg-gradient p-4 rounded-3 shadow">
+      <div *ngIf="isLoading" class="loading text-center">
+        <span class="loader"></span>
+        <p>Searching, please wait...</p>
+      </div>
+
+      <div *ngIf="errorMessage" class="error-message text-danger text-center">
+        {{ errorMessage }}
+      </div>
+
+      <table *ngIf="results.length > 0" class="table table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th class="text-left">Title</th>
+            <th class="text-left">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let result of results">
+            <td class="text-left">{{ result.title }}</td>
+            <td><a [href]="result.url" target="_blank" class="btn btn-warning btn-sm">View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div *ngIf="results.length === 0 && !isLoading && !errorMessage" class="no-results text-left">
+        Your search results will appear here.
+      </div>
+    </div>
+  </section>
+</main>

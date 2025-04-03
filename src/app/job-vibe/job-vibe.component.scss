@@ -1,223 +1,188 @@
-.autocomplete-suggestions {
-  position: absolute;
+/* Base Styles */
+
+/* Styling for the Vet Mashinani Icon */
+.search-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  object-fit: contain; /* Ensure the icon maintains its aspect ratio */
+  margin-right: 12px; /* Space between the icon and the input field */
+}
+
+/* Base Styles for the Header */
+.search-header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  max-height: 200px;
-  overflow-y: auto;
-  z-index: 10;
-}
-
-.autocomplete-suggestions ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.autocomplete-suggestions li {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.autocomplete-suggestions li:hover {
-  background-color: #f0f0f0;
-}
-
-.job-vibe-container {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 30px;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffffff, #f0f5ff);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  padding: 15px 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-box {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  justify-content: center; /* Center content within the search-box */
+  gap: 16px;
+  width: 100%;
+  max-width: 900px; /* Restrict the max width */
 }
 
 .search-input {
   flex-grow: 1;
-  padding: 14px;
+  padding: 15px;
   font-size: 16px;
   border-radius: 10px;
-  border: 1px solid #ddd;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #0056b3;
-  box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
-}
-
-.search-button {
-  background: #007bff;
-  color: white;
   border: none;
-  padding: 14px 22px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
 }
 
-.search-button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
+main {
+  padding-top: 90px; /* Ensures content starts below the fixed search box */
 }
 
-.loading {
+/* Styling for the results section */
+.results-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.job-vibe-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 40px 30px;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-size: 18px;
-  color: #007bff;
-  font-weight: bold;
 }
 
-.loader {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  border: 3px solid #007bff;
-  border-top: 3px solid transparent;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.error-message {
-  text-align: center;
-  font-size: 18px;
-  color: #dc3545;
-  font-weight: bold;
-}
-
-.no-results {
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-}
-
-.results {
+/* Table Styling */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
 }
 
-.result-item {
-  background: #f8f9fa;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
+.results-table th,
+.results-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
 }
 
-.result-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
-}
-
-.result-item h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #333;
-}
-
-.result-description {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 12px;
-}
-
-.view-button {
-  display: inline-block;
-  padding: 12px 18px;
-  font-size: 14px;
-  background: #ffb300;
+.results-table th {
+  background: #5ca9fb;
   color: white;
-  border-radius: 8px;
+  font-weight: bold;
+}
+
+.results-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.results-table tr:hover {
+  background: #f1f1f1;
+}
+
+/* View Button */
+.view-button {
+  background:  #ffb300;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  font-size: 14px;
+  display: inline-block;
 }
 
 .view-button:hover {
-  background: #e69500;
-  transform: scale(1.05);
+  background:  #b68106;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-  .job-vibe-container {
-    padding: 20px;
-    margin: 20px;
-  }
 
-  .search-input, .search-button {
-    font-size: 14px;
-  }
+/* Mobile Responsiveness */
 
-  .result-item {
-    padding: 15px;
-  }
-
-  .result-item h3 {
-    font-size: 18px;
-  }
-
-  .result-description {
-    font-size: 12px;
-  }
-
-  .view-button {
+/* For devices with a max width of 768px (tablets and smaller) */
+@media screen and (max-width: 768px) {
+  .search-header {
     padding: 10px 15px;
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .job-vibe-container {
-    padding: 15px;
-    margin: 15px;
   }
 
   .search-box {
-    flex-direction: column;
-    align-items: stretch;
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .search-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
   }
 
   .search-input {
-    margin-bottom: 10px;
     padding: 12px;
+    font-size: 14px;
   }
 
-  .search-button {
-    width: 100%;
-    padding: 12px;
+  .job-vibe-container {
+    padding: 20px;
   }
 
-  .result-item {
-    padding: 12px;
+  .results-table th, .results-table td {
+    padding: 10px;
   }
 
-  .result-item h3 {
-    font-size: 16px;
-  }
-
-  .result-description {
-    font-size: 11px;
+  .results-table th {
+    font-size: 14px;
   }
 
   .view-button {
-    padding: 10px 12px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* For devices with a max width of 480px (smartphones) */
+@media screen and (max-width: 480px) {
+  .search-header {
+    padding: 8px 12px;
+  }
+
+  .search-box {
+    flex-direction: row; /* Forces the search box contents to stay in one line */
+    gap: 8px;
+  }
+
+  .search-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0;
+  }
+
+  .search-input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .job-vibe-container {
+    padding: 15px;
+  }
+
+  .results-table th, .results-table td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .view-button {
+    padding: 5px 8px;
     font-size: 10px;
   }
 }
