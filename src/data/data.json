@@ -14,22 +14,10 @@
     "url": "https://www.vetmashinani.com/farmer/appointments"
   },
   {
-    "icon": "fa fa-user-md",
-    "name": "TeleVet Consultations",
-    "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment.",
-    "url": "https://www.vetmashinani.com/farmer/televet"
-  },
-  {
     "icon": "fa fa-stethoscope",
     "name": "AI Disease Diagnosis",
     "text": "Utilize AI-driven diagnostics to detect and manage cattle diseases early based on reported symptoms and data.",
     "url": "https://www.vetmashinani.com/disease/diagnosis"
-  },
-  {
-    "icon": "fa fa-shopping-cart",
-    "name": "AgrovetHub",
-    "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers.",
-    "url": "https://www.vetmashinani.com/agrovet/hub"
   },
   {
     "icon": "fa fa-briefcase",
@@ -38,10 +26,22 @@
     "url": "https://www.vetmashinani.com/job/vibe"
   },
   {
+    "icon": "fa fa-user-md",
+    "name": "TeleVet Consultations",
+    "text": "Access remote veterinary care via video calls or chat for expert advice on livestock health and treatment.",
+    "url": "https://www.vetmashinani.com/farmer/televet"
+  },
+  {
     "icon": "fa fa-book",
     "name": "EduContent",
     "text": "Access educational resources, training programs, and expert guides to enhance your livestock management and farming knowledge.",
     "url": "https://www.vetmashinani.com/edu/content"
+  },
+  {
+    "icon": "fa fa-shopping-cart",
+    "name": "AgrovetHub",
+    "text": "Find and order high-quality veterinary medicines, vaccines, animal feeds, and farm supplies from trusted sellers.",
+    "url": "https://www.vetmashinani.com/agrovet/hub"
   }
 ],
 
