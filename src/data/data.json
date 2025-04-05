@@ -11,7 +11,7 @@
     "icon": "fa fa-home",
     "name": "In-Person Vet Visits",
     "text": "Schedule certified veterinarians for on-site visits to provide hands-on care and treatment for your livestock.",
-    "url": "http://localhost:4200/vet/dashboard"
+    "url": "https://www.vetmashinani.com/vet/dashboard"
   },
   {
     "icon": "fa fa-stethoscope",
