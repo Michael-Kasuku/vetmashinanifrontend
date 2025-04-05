@@ -1,58 +1,58 @@
 {
-  "name": "frontend",
-  "short_name": "frontend",
+  "name": "Vet Mashinani",
+  "short_name": "VMashinani",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "./",
-  "start_url": "./",
+  "scope": "/",
+  "start_url": "/",
   "icons": [
     {
-      "src": "icons/icon-72x72.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "72x72",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-96x96.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "96x96",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-128x128.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "128x128",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-144x144.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "144x144",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-152x152.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "152x152",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-192x192.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-384x384.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "384x384",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "icons/vetmashinani.ico",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/ico",
       "purpose": "maskable any"
     }
   ]
