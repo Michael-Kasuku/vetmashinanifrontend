@@ -1,0 +1,137 @@
+section {
+  background: url(/img/diagnosis.png) no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Main Container */
+.diagnosis-container {
+  max-width: 450px;
+  width: 100%;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; /* Changed from absolute */
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  h2 {
+    color: #ffb300;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  .input-section {
+    margin-bottom: 20px;
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
+
+  .chip-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px 0;
+
+    .chip {
+      background: linear-gradient(135deg, #ffb300, #ffb300);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      transition: 0.3s ease-in-out;
+
+      .chip-remove {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: #ff4d4d;
+        }
+      }
+    }
+  }
+
+  /* Bootstrap Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    margin-top: 15px;
+  }
+
+  .loading-section {
+    margin-top: 20px;
+
+    p {
+      margin-top: 5px;
+      font-weight: 500;
+      color: #555;
+    }
+  }
+
+  .result-section {
+    margin-top: 20px;
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+
+    p {
+      margin: 0;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+}
+
+/* 🔹 Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .diagnosis-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagnosis-container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

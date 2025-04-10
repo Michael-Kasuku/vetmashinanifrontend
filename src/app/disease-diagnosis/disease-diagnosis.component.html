@@ -1,0 +1,45 @@
+<section>
+<div class="diagnosis-container">
+  <h2>Disease Diagnosis</h2>
+
+  <div class="input-section">
+    <mat-form-field class="full-width">
+      <mat-label>Enter symptom</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="symptomControl"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="addSymptom($event.option.viewValue)">
+        <mat-option *ngFor="let symptom of filteredSymptoms | async" [value]="symptom">
+          {{ symptom }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+
+  <div class="symptom-list">
+    <div class="chip-container">
+      <div *ngFor="let symptom of symptoms" class="chip">
+        {{ symptom }}
+        <button (click)="removeSymptom(symptom)" class="chip-remove">&times;</button>
+      </div>
+    </div>    
+  </div>
+
+  <button class="btn btn-primary w-100 mt-3" (click)="diagnose()" [disabled]="loading">
+    Diagnose
+  </button>  
+
+  <!-- Show Progress Spinner While Diagnosing -->
+  <div *ngIf="loading" class="loading-section">
+    <mat-spinner></mat-spinner>
+    <p>Diagnosing, please wait...</p>
+  </div>
+
+  <div *ngIf="diagnosisResult" class="result-section">
+    <p><strong>Predicted Disease:</strong> {{ formatDiseaseName(diagnosisResult.predicted_disease) }}</p>
+  </div>
+</div>
+</section>
