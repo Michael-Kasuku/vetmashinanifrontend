@@ -1,0 +1,192 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  background: #2e7d32;
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.sidebar h1 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffb300;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1.5rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: #1b5e20;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  background: #388e3c;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.quick-actions button:hover {
+  background: #2e7d32;
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 250px;
+}
+
+.stat-card h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ==================== Responsive Breakpoints ==================== */
+
+/* Medium screens (tablets, landscape phones) */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dashboard-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    min-width: unset;
+  }
+}
+
+/* Extra small screens (old phones, < 480px) */
+@media (max-width: 480px) {
+  .sidebar h1 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .dashboard-header {
+    padding: 1.2rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .quick-actions button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    padding: 1.2rem;
+  }
+
+  .stat-card h4 {
+    font-size: 1rem;
+  }
+
+  .stat-card p {
+    font-size: 1.2rem;
+  }
+}

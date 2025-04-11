@@ -1,1 +1,41 @@
-<p>farmer-dashboard works!</p>
+<div class="dashboard-layout">
+    <nav class="sidebar">
+      <h1>Vet Mashinani</h1>
+      <ul>
+        <li><a routerLink="/farmer/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li><a routerLink="/farmer/appointments" routerLinkActive="active">Appointments</a></li>
+        <li><a routerLink="/farmer/vets" routerLinkActive="active">Nearby Vets</a></li>
+        <li><a routerLink="/farmer/rewards" routerLinkActive="active">Rewards</a></li>
+        <li><a routerLink="/farmer/profile" routerLinkActive="active">Profile</a></li>
+        <li><a href="#" (click)="logout($event)">Logout</a></li>
+      </ul>
+    </nav>
+  
+    <main class="main-content">
+      <header class="dashboard-header">
+        <h2>Welcome back, {{ farmerName }}!</h2>
+        <div class="quick-actions">
+          <button routerLink="/farmer/appointments">Book Appointment</button>
+          <button routerLink="/farmer/vets">Find Nearby Vets</button>
+          <button routerLink="/farmer/rewards">Check Rewards</button>
+        </div>
+      </header>
+  
+      <!-- Placeholder for stats/appointments -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h4>Upcoming Appointments</h4>
+          <p>{{ upcomingAppointments }}</p>
+        </div>
+        <div class="stat-card">
+          <h4>Coins Earned</h4>
+          <p>{{ coinsEarned }}</p>
+        </div>
+        <div class="stat-card">
+          <h4>Wallet Balance</h4>
+          <p>{{ walletBalance }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
