@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-farmer-login',
@@ -30,19 +32,41 @@ export class FarmerLoginComponent {
   };
 
   constructor(
-    private snackBar: MatSnackBar
-  ) { }
+    private snackBar: MatSnackBar,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
-  // Handles the login process
   handleLogin() {
-    // Basic validation for empty fields
     if (!this.formData.Username || !this.formData.Password) {
       this.openSnackbar('Both fields are required.', 'error');
       return;
     }
+
+    const payload = {
+      username: this.formData.Username,
+      password: this.formData.Password
+    };
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http.post<any>('http://127.0.0.1:8000/login/', payload, { headers }).subscribe({
+      next: (response) => {
+        // Save farmer info in local storage
+        localStorage.setItem('farmer', JSON.stringify(response.user));
+
+        this.openSnackbar('Login successful!', 'success');
+
+        // Redirect to dashboard
+        this.router.navigate(['/farmer/dashboard']);
+      },
+      error: (err) => {
+        const errorMsg = err.error?.error || 'Login failed. Please try again.';
+        this.openSnackbar(errorMsg, 'error');
+      }
+    });
   }
 
-  // Utility method to show snackbar notifications
   openSnackbar(message: string, severity: 'success' | 'error') {
     const snackBarClass = severity === 'success' ? 'snackbar-success' : 'snackbar-error';
     this.snackBar.open(message, 'Close', {

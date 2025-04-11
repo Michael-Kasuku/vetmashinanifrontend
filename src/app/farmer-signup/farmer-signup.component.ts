@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
@@ -8,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-farmer-signup',
@@ -39,7 +41,9 @@ export class FarmerSignupComponent {
   locationOptions: { name: string, lat: number, lng: number }[] = [];
 
   constructor(
-    private snackBar: MatSnackBar
+    private http: HttpClient,
+    private snackBar: MatSnackBar,
+    private router: Router // Inject Router
   ) { }
 
   async fetchLocations(query: string) {
@@ -47,7 +51,7 @@ export class FarmerSignupComponent {
       this.locationOptions = [];
       return;
     }
-    
+
     try {
       const response = await fetch(
         `https://nominatim.openstreetmap.org/search?format=json&q=${query}, Kenya`
@@ -76,7 +80,6 @@ export class FarmerSignupComponent {
   handleSubmit(event: Event) {
     event.preventDefault();
 
-    // Basic Validation
     if (
       !this.formData.Username ||
       !this.formData.Location ||
@@ -88,7 +91,6 @@ export class FarmerSignupComponent {
       return;
     }
 
-    // Password Length and Alphanumeric Validation
     const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[\W_])[a-zA-Z\d\W_]{8,}$/;
 
     if (!passwordRegex.test(this.formData.PasswordHash)) {
@@ -99,11 +101,36 @@ export class FarmerSignupComponent {
       return;
     }
 
-    // Password Match Validation
     if (this.formData.PasswordHash !== this.formData.ConfirmPassword) {
       this.openSnackbar('Passwords do not match.', 'error');
       return;
     }
+
+    const payload = {
+      username: this.formData.Username,
+      email: this.formData.Email,
+      password: this.formData.PasswordHash,
+      is_farmer: true,
+      is_vet: false,
+      location_lat: this.formData.Latitude,
+      location_lng: this.formData.Longitude
+    };
+
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    this.http.post('http://127.0.0.1:8000/signup/', payload, { headers })
+      .subscribe({
+        next: (res: any) => {
+          this.openSnackbar(res.message || 'Signup successful!', 'success');
+          setTimeout(() => {
+            this.router.navigate(['/farmer/login']);
+          }, 1500);
+        },
+        error: (err: any) => {
+          const errorMsg = err?.error?.error || 'Signup failed. Please try again.';
+          this.openSnackbar(errorMsg, 'error');
+        }
+      });
   }
 
   openSnackbar(message: string, severity: 'success' | 'error') {
