@@ -1,0 +1,132 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 3rem 5vw;
+    gap: 3rem;
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff); /* Soft blue to white gradient */
+  }
+  
+  @media (min-width: 768px) {
+    .splash-container {
+      flex-direction: row;
+      justify-content: center; /* center horizontally */
+      text-align: left;
+      gap: 5rem; /* space between intro and buttons */
+    }
+  }
+  
+  .intro-text {
+    max-width: 500px;
+  }
+  
+  .brand-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffb300;
+    margin-bottom: 1rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    color: #6c757d;
+  }
+  
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .option-card {
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .option-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .option-btn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+  }
+  
+  .or-text {
+    text-align: center;
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Mobile specific styling */
+  @media (max-width: 767px) {
+    .splash-container {
+      padding: 2rem 4vw;
+      gap: 2rem;
+    }
+  
+    .brand-title {
+      font-size: 2.3rem; /* Reduce title size for small screens */
+    }
+  
+    .tagline {
+      font-size: 1.1rem; /* Slightly smaller tagline */
+    }
+  
+    .options-container {
+      max-width: 100%;
+      gap: 1.2rem; /* Reduced gap between options for small screens */
+    }
+  
+    .option-card {
+      padding: 0.8rem 1.2rem; /* Reduced padding for better space utilization */
+    }
+  
+    .option-btn {
+      font-size: 0.9rem;
+      padding: 0.65rem; /* Smaller button size */
+    }
+  
+    .or-text {
+      font-size: 0.85rem; /* Slightly smaller text */
+    }
+  
+    /* Extra small devices like phones in portrait */
+    @media (max-width: 480px) {
+      .brand-title {
+        font-size: 1.8rem; /* Further reduced title size for very small screens */
+      }
+  
+      .tagline {
+        font-size: 1rem; /* Smaller tagline for tiny screens */
+      }
+  
+      .options-container {
+        gap: 1rem; /* Reduce space between options */
+      }
+  
+      .option-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem; /* More compact button size */
+      }
+  
+      .or-text {
+        font-size: 0.8rem; /* Even smaller or-text for tiny screens */
+      }
+    }
+  }
+  
