@@ -1,0 +1,30 @@
+<div *ngIf="farmerName !== 'Unknown Farmer'" class="notifications-wrapper">
+  <h2 class="title">Notifications for {{ farmerName }}</h2>
+
+  <div class="notifications-grid">
+    <!-- Unread Section -->
+    <section class="notification-section">
+      <h3>Unread</h3>
+      <div *ngIf="unreadNotifications.length > 0; else noUnread">
+        <div *ngFor="let notification of unreadNotifications" class="notification unread">
+          <p class="message">{{ notification.message }}</p>
+          <small class="timestamp">{{ formatToEAT(notification.created_at) }}</small>
+          <button class="mark-read-btn" (click)="markAsRead(notification.id)">Mark as Read</button>
+        </div>
+      </div>
+      <ng-template #noUnread><p class="empty-state">No unread notifications</p></ng-template>
+    </section>
+
+    <!-- Read Section -->
+    <section class="notification-section">
+      <h3>Read</h3>
+      <div *ngIf="readNotifications.length > 0; else noRead">
+        <div *ngFor="let notification of readNotifications" class="notification read">
+          <p class="message">{{ notification.message }}</p>
+          <small class="timestamp">{{ formatToEAT(notification.created_at) }}</small>
+        </div>
+      </div>
+      <ng-template #noRead><p class="empty-state">No read notifications yet.</p></ng-template>
+    </section>
+  </div>
+</div>

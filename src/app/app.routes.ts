@@ -9,12 +9,14 @@ import { VetDashboardComponent } from './vet-dashboard/vet-dashboard.component';
 import { DiseaseDiagnosisComponent } from './disease-diagnosis/disease-diagnosis.component';
 import { FavoriteVetsComponent } from './favorite-vets/favorite-vets.component';
 import { NearbyVetsComponent } from './nearby-vets/nearby-vets.component';
+import { FarmerNotificationsComponent } from './farmer-notifications/farmer-notifications.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'farmer/login', component: FarmerLoginComponent },
     { path: 'farmer/signup', component: FarmerSignupComponent },
     { path: 'farmer/dashboard', component: FarmerDashboardComponent },
+    { path: 'farmer/notifications', component: FarmerNotificationsComponent },
     { path: 'vet/login', component: VetLoginComponent },
     { path: 'vet/signup', component: VetSignupComponent },
     { path: 'vet/dashboard', component: VetDashboardComponent },

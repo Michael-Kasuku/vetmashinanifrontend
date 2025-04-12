@@ -1,0 +1,176 @@
+.notifications-wrapper {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  border-radius: 12px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.notifications-grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.notification-section {
+  flex: 1 1 48%;
+  min-width: 320px;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.notification-section h3 {
+  font-size: 1.375rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.notification {
+  padding: 1.25rem;
+  border: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.unread {
+  background-color: #fff8e1;
+}
+
+.read {
+  background-color: #f1f3f5;
+}
+
+.message {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.timestamp {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1rem; /* Space between timestamp and button */
+  display: block; /* Ensure timestamp and button are on separate lines */
+}
+
+.btn-wrapper {
+  margin-top: 1rem;
+}
+
+.mark-read-btn {
+  display: block;  /* Makes the button take up full width and appear below the timestamp */
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem; /* Optional: Adds space above the button */
+}
+
+.mark-read-btn:hover {
+  background-color: #0056b3;
+}
+
+.empty-state {
+  color: #999;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
+  .notifications-wrapper {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .notifications-grid {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .notification-section {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+
+  .notification-section h3 {
+    font-size: 1.25rem;
+  }
+
+  .notification {
+    padding: 1rem;
+  }
+
+  .message {
+    font-size: 0.9rem;
+  }
+
+  .timestamp {
+    font-size: 0.8rem;
+  }
+
+  .mark-read-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .notifications-grid {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .notification-section {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+
+  .notification-section h3 {
+    font-size: 1.125rem;
+  }
+
+  .notification {
+    padding: 0.75rem;
+  }
+
+  .message {
+    font-size: 0.875rem;
+  }
+
+  .timestamp {
+    font-size: 0.75rem;
+  }
+
+  .mark-read-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
