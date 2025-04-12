@@ -42,21 +42,20 @@ export class FarmerLoginComponent {
       this.openSnackbar('Both fields are required.', 'error');
       return;
     }
-
+  
     const payload = {
       username: this.formData.Username,
       password: this.formData.Password
     };
-
+  
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
+  
     this.http.post<any>('http://127.0.0.1:8000/login/', payload, { headers }).subscribe({
       next: (response) => {
-        // Save farmer info in local storage
-        localStorage.setItem('farmer', JSON.stringify(response.user));
-
+        localStorage.setItem('farmer_name', response.user.username);
+  
         this.openSnackbar('Login successful!', 'success');
-
+  
         // Redirect to dashboard
         this.router.navigate(['/farmer/dashboard']);
       },
@@ -65,7 +64,7 @@ export class FarmerLoginComponent {
         this.openSnackbar(errorMsg, 'error');
       }
     });
-  }
+  }  
 
   openSnackbar(message: string, severity: 'success' | 'error') {
     const snackBarClass = severity === 'success' ? 'snackbar-success' : 'snackbar-error';

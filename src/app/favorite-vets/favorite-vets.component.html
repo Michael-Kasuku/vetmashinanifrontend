@@ -1,0 +1,36 @@
+<section>
+    <div class="favorite-vets-container">
+      <h2 class="header">My Favorite Vets</h2>
+  
+      <div *ngIf="favoriteVets.length > 0; else noFavorites" class="vet-list">
+        <div class="vet-card" *ngFor="let vet of favoriteVets">
+          <img src="img/vetmashinani.png" alt="Vet Avatar" class="vet-avatar" />
+          <div class="vet-info">
+            <h3 class="vet-username">{{ vet }}</h3>
+            <p class="vet-tagline">Certified Veterinarian</p>
+            <button class="book-appointment-btn" (click)="bookAppointment(vet)">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+  
+      <ng-template #noFavorites>
+        <div class="no-favorites">
+          <img src="img/vetmashinani.png" alt="No Favorites" class="empty-img" />
+          <p>You haven't added any favorite vets yet.</p>
+        </div>
+      </ng-template>
+    </div>
+  
+    <!-- Dialog Box -->
+    <div class="overlay" *ngIf="showDialog">
+      <div class="dialog-box">
+        <h3>Book Appointment with {{ selectedVet }}</h3>
+        <textarea [(ngModel)]="appointmentDescription" placeholder="Enter description..." rows="4"></textarea>
+        <div class="dialog-actions">
+          <button class="cancel-btn" (click)="closeDialog()">Cancel</button>
+          <button class="confirm-btn" (click)="confirmAppointment()">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  

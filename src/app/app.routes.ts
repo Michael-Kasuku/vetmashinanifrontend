@@ -7,6 +7,8 @@ import { VetLoginComponent } from './vet-login/vet-login.component';
 import { VetSignupComponent } from './vet-signup/vet-signup.component';
 import { VetDashboardComponent } from './vet-dashboard/vet-dashboard.component';
 import { DiseaseDiagnosisComponent } from './disease-diagnosis/disease-diagnosis.component';
+import { FavoriteVetsComponent } from './favorite-vets/favorite-vets.component';
+import { NearbyVetsComponent } from './nearby-vets/nearby-vets.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,5 +18,7 @@ export const routes: Routes = [
     { path: 'vet/login', component: VetLoginComponent },
     { path: 'vet/signup', component: VetSignupComponent },
     { path: 'vet/dashboard', component: VetDashboardComponent },
-    { path: 'disease/diagnosis', component: DiseaseDiagnosisComponent } 
+    { path: 'disease/diagnosis', component: DiseaseDiagnosisComponent },
+    { path: 'favorite/vets', component: FavoriteVetsComponent },
+    { path: 'nearby/vets', component: NearbyVetsComponent } 
 ];

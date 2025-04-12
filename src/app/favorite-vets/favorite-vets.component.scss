@@ -1,0 +1,268 @@
+section {
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .favorite-vets-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2f4f4f;
+  }
+  
+  .vet-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .vet-card {
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    padding: 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .vet-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .vet-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4caf50;
+  }
+  
+  .vet-info {
+    flex: 1;
+  }
+  
+  .vet-username {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .vet-tagline {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .no-favorites {
+    text-align: center;
+    font-size: 1rem;
+    color: #888;
+    margin-top: 2.5rem;
+  }
+  
+  .empty-img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .book-appointment-btn {
+    padding: 0.5rem 1.25rem;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-appointment-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Dialog Styles */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .dialog-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .dialog-box h3 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .dialog-box textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    resize: none;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .dialog-actions .cancel-btn,
+  .dialog-actions .confirm-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .dialog-actions .cancel-btn {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .dialog-actions .confirm-btn {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .dialog-actions .confirm-btn:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .favorite-vets-container {
+      padding: 1.5rem 1rem;
+    }
+  
+    .header {
+      font-size: 1.8rem;
+    }
+  
+    .vet-list {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .vet-card {
+      padding: 1rem;
+    }
+  
+    .vet-avatar {
+      width: 56px;
+      height: 56px;
+    }
+  
+    .vet-username {
+      font-size: 1.1rem;
+    }
+  
+    .vet-tagline {
+      font-size: 0.85rem;
+    }
+  
+    .book-appointment-btn {
+      font-size: 0.85rem;
+    }
+  
+    .dialog-box {
+      width: 95%;
+      padding: 1.5rem;
+    }
+  
+    .dialog-box h3 {
+      font-size: 1.15rem;
+    }
+  
+    .dialog-box textarea {
+      font-size: 0.9rem;
+    }
+  
+    .dialog-actions .cancel-btn,
+    .dialog-actions .confirm-btn {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.6rem;
+    }
+  
+    .vet-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .vet-card {
+      padding: 0.75rem;
+    }
+  
+    .vet-avatar {
+      width: 48px;
+      height: 48px;
+    }
+  
+    .vet-username {
+      font-size: 1rem;
+    }
+  
+    .vet-tagline {
+      font-size: 0.75rem;
+    }
+  
+    .book-appointment-btn {
+      font-size: 0.8rem;
+    }
+  
+    .dialog-box {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .dialog-box h3 {
+      font-size: 1rem;
+    }
+  
+    .dialog-box textarea {
+      font-size: 0.85rem;
+    }
+  
+    .dialog-actions .cancel-btn,
+    .dialog-actions .confirm-btn {
+      font-size: 0.8rem;
+    }
+  }
+  

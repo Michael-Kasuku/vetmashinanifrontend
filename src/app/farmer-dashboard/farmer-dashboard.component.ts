@@ -12,13 +12,12 @@ import { Router } from '@angular/router';
     MatSnackBarModule,
   ],
   templateUrl: './farmer-dashboard.component.html',
-  styleUrl: './farmer-dashboard.component.scss'
+  styleUrls: ['./farmer-dashboard.component.scss']
 })
 export class FarmerDashboardComponent implements OnInit {
   farmerName: string = '';
-  upcomingAppointments: number = 0;
-  coinsEarned: number = 0;
-  walletBalance: number = 0.0;  // Replacing vetsRated with walletBalance
+  coinBalance: number = 0.0;
+  walletBalance: number = 0.0;
 
   constructor(
     private http: HttpClient,
@@ -31,29 +30,54 @@ export class FarmerDashboardComponent implements OnInit {
   }
 
   fetchFarmerData() {
-    const storedFarmer = localStorage.getItem('farmer');
-    if (storedFarmer) {
-      const farmer: { username: string } = JSON.parse(storedFarmer);
-      this.farmerName = farmer.username || 'Unknown Farmer';
+    const storedName = localStorage.getItem('farmer_name');
+
+    if (storedName) {
+      this.farmerName = storedName;
+      this.getCoinBalance();
+      this.getWalletBalance();
     } else {
       this.farmerName = 'Unknown Farmer';
-      this.walletBalance = 0.0;
+      this.openSnackbar('Farmer information missing. Please log in.', 'error');
+      this.router.navigate(['/farmer/login']);
     }
-  
-    // Dummy values for other data
-    this.upcomingAppointments = 3;
-    this.coinsEarned = 150;
-  }      
+  }
+
+  getCoinBalance() {
+    const apiUrl = `http://127.0.0.1:8000/get-coin-balance/?username=${this.farmerName}`;
+    this.http.get<any>(apiUrl).subscribe(
+      (response) => {
+        this.coinBalance = response.coin_balance || 0.0;
+      },
+      (error) => {
+        this.openSnackbar('Failed to fetch coin balance.', 'error');
+        console.error('Error fetching coin balance:', error);
+      }
+    );
+  }
+
+  getWalletBalance() {
+    const apiUrl = `http://127.0.0.1:8000/get-wallet-balance/?username=${this.farmerName}`;
+    this.http.get<any>(apiUrl).subscribe(
+      (response) => {
+        this.walletBalance = response.wallet_balance || 0.0;
+      },
+      (error) => {
+        this.openSnackbar('Failed to fetch wallet balance.', 'error');
+        console.error('Error fetching wallet balance:', error);
+      }
+    );
+  }
 
   logout(event?: Event): void {
     if (event) event.preventDefault();
-  
+
     const confirmed = window.confirm('Are you sure you want to logout?');
     if (confirmed) {
-      localStorage.removeItem('farmer');
+      localStorage.removeItem('farmer_name');
       this.router.navigate(['/farmer/login']);
     }
-  }   
+  }
 
   openSnackbar(message: string, severity: 'success' | 'error') {
     const snackBarClass = severity === 'success' ? 'snackbar-success' : 'snackbar-error';
