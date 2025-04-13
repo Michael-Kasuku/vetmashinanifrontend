@@ -2,9 +2,9 @@
     <nav class="sidebar">
       <h1>Vet Mashinani</h1>
       <ul>
-        <li><a href="http://localhost:4200/farmer/dashboard" routerLinkActive="active">Dashboard</a></li>
-        <li><a routerLink="/farmer/appointments" routerLinkActive="active">My Appointments</a></li>
-        <li><a routerLink="/farmer/profile" routerLinkActive="active">My Profile</a></li>
+        <li><a href="http://localhost:4200/farmer/dashboard">Dashboard</a></li>
+        <li><a href="http://localhost:4200/farmer/appointments">My Appointments</a></li>
+        <li><a href="http://localhost:4200/farmer/profile">My Profile</a></li>
         <li><a href="#" (click)="logout($event)">Logout</a></li>
       </ul>
     </nav>
@@ -14,11 +14,11 @@
         <div>
           <h2>Welcome back, {{ farmerName }}!</h2>
           <div class="quick-actions">
-            <a href="http://localhost:4200/favorite/vets">Favorites</a>
-            <a href="http://localhost:4200/disease/diagnosis">AI Disease Diagnosis</a>
-            <a href="http://localhost:4200/nearby/vets">Nearby Vets</a>
-            <a href="http://localhost:4200/farmer/rewards">Rewards</a>
             <a href="http://localhost:4200/farmer/notifications">Notifications</a>
+            <a href="http://localhost:4200/favorite/vets">Favorites</a>
+            <a href="http://localhost:4200/nearby/vets">Nearby Vets</a>
+            <a href="http://localhost:4200/disease/diagnosis">Disease Diagnosis</a>
+            <a href="http://localhost:4200/farmer/rewards">Rewards</a>
             <a href="/help/farmermanual.pdf">Farmer Manual</a>
           </div>
         </div>        

@@ -1,0 +1,191 @@
+.update-profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.update-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.update-card:hover {
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.mat-divider {
+    margin: 1.5rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.location-field {
+    width: 100%;
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+}
+
+.mat-form-field-wrapper {
+    padding: 0 0.5rem;
+}
+
+.mat-form-field-infix {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+}
+
+.update-btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fbbf24; /* Soft yellow for text */
+    border-radius: 0.75rem;
+    background-color: #1e293b; /* Darker primary background color */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-transform: uppercase; /* Make text uppercase for a more refined look */
+}
+
+.update-btn:hover:not(:disabled) {
+    background-color: #334155; /* Slightly lighter shade for hover */
+    color: #f59e0b; /* Bright yellow text for hover */
+    transform: translateY(-3px); /* More pronounced lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.update-btn:active {
+    background-color: #22303c; /* Even darker for active state */
+    color: #facc15; /* Vibrant yellow on active */
+    transform: translateY(0); /* Reset translate effect */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly reduced shadow on active */
+}
+
+.update-btn:disabled {
+    background-color: #4b5563; /* Subdued grayish color for disabled state */
+    color: #9ca3af; /* Light gray text for disabled */
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.update-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 99, 255, 0.3); /* Focus state for accessibility */
+}
+
+.mat-autocomplete-panel {
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.08) !important;
+}
+
+.mat-option {
+    font-size: 1rem;
+    padding: 0.75rem 1rem !important;
+}
+
+.mat-option:hover {
+    background-color: #e0f2fe !important;
+}
+
+/* Mobile-friendly adjustments for larger mobile screens */
+@media (max-width: 768px) {
+    .update-profile-container {
+        padding: 2rem 1rem;
+    }
+
+    .update-card {
+        padding: 2rem 1.25rem;
+        max-width: 100%;
+        margin: 0 1rem; /* Ensure there's spacing from the edges */
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .form {
+        gap: 1.5rem;
+    }
+
+    .location-field {
+        padding: 0.5rem;
+    }
+
+    .update-btn {
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Adjustments for very small screens (480px and below) */
+@media (max-width: 480px) {
+    .update-profile-container {
+        padding: 1.5rem 0.5rem; /* Reduce padding to fit the screen */
+    }
+
+    .update-card {
+        padding: 1.5rem 1rem;
+        margin: 0 0.5rem; /* Slight margin for small screens */
+    }
+
+    .title {
+        font-size: 1.25rem; /* Smaller title for tiny screens */
+    }
+
+    .subtitle {
+        font-size: 0.85rem; /* Adjust subtitle size */
+    }
+
+    .form {
+        gap: 1.2rem; /* Smaller gap between form elements */
+    }
+
+    .location-field {
+        padding: 0.5rem; /* Keep padding consistent */
+    }
+
+    .update-btn {
+        padding: 0.75rem 1.25rem; /* Adjust button padding */
+        font-size: 0.9rem; /* Smaller font size for button */
+    }
+}

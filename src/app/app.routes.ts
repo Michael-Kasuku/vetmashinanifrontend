@@ -11,6 +11,8 @@ import { FavoriteVetsComponent } from './favorite-vets/favorite-vets.component';
 import { NearbyVetsComponent } from './nearby-vets/nearby-vets.component';
 import { FarmerNotificationsComponent } from './farmer-notifications/farmer-notifications.component';
 import { FarmerRewardComponent } from './farmer-reward/farmer-reward.component';
+import { FarmerProfileComponent } from './farmer-profile/farmer-profile.component';
+import { FarmerAppointmentComponent } from './farmer-appointment/farmer-appointment.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,7 +20,9 @@ export const routes: Routes = [
     { path: 'farmer/signup', component: FarmerSignupComponent },
     { path: 'farmer/dashboard', component: FarmerDashboardComponent },
     { path: 'farmer/notifications', component: FarmerNotificationsComponent },
+    { path: 'farmer/profile', component: FarmerProfileComponent },
     { path: 'farmer/rewards', component: FarmerRewardComponent },
+    { path: 'farmer/appointments', component: FarmerAppointmentComponent },
     { path: 'vet/login', component: VetLoginComponent },
     { path: 'vet/signup', component: VetSignupComponent },
     { path: 'vet/dashboard', component: VetDashboardComponent },

@@ -1,0 +1,38 @@
+<div class="appointment-container">
+    <h2>My Appointments</h2>
+  
+    <div class="appointment-columns">
+      <div class="appointment-section pending">
+        <h3>Pending</h3>
+        <div *ngIf="pendingAppointments.length === 0" class="empty">No pending appointments.</div>
+        <div class="card" *ngFor="let appt of pendingAppointments">
+          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
+          <p><strong>Sent:</strong> {{ convertToEAT(appt.time_sent) }}</p>
+        </div>
+      </div>
+  
+      <div class="appointment-section approved">
+        <h3>Approved</h3>
+        <div *ngIf="approvedAppointments.length === 0" class="empty">No approved appointments.</div>
+        <div class="card" *ngFor="let appt of approvedAppointments">
+          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
+          <p><strong>Vet Note:</strong> {{ appt.vet_note }}</p>
+          <p><strong>Sent:</strong> {{ convertToEAT(appt.time_sent) }}</p>
+        </div>
+      </div>
+  
+      <div class="appointment-section cancelled">
+        <h3>Cancelled</h3>
+        <div *ngIf="cancelledAppointments.length === 0" class="empty">No cancelled appointments.</div>
+        <div class="card" *ngFor="let appt of cancelledAppointments">
+          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
+          <p><strong>Vet Note:</strong> {{ appt.vet_note }}</p>
+          <p><strong>Sent:</strong> {{ convertToEAT(appt.time_sent) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
