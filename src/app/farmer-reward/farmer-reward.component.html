@@ -1,0 +1,31 @@
+<div class="center-wrapper">
+    <section>
+      <h2>My Rewards</h2>
+      <p>Coin Balance: {{ coinBalance }}</p>
+      <p>Wallet Balance: KES {{ walletBalance }}</p>
+  
+      <div class="coin-actions">
+        <input
+          type="number"
+          [(ngModel)]="coinAmount"
+          placeholder="Enter coin amount"
+        />
+        <button (click)="showDialog('deposit')">Deposit Coins</button>
+        <button class="withdraw-btn" (click)="showDialog('withdraw')">Withdraw Coins</button>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Modal Backdrop -->
+  <div class="modal-backdrop" *ngIf="dialogVisible" (click)="closeDialog()"></div>
+  
+  <!-- Dialog Box -->
+  <div class="dialog-box" *ngIf="dialogVisible">
+    <h3>{{ dialogType === 'deposit' ? 'Deposit Coins' : 'Withdraw Coins' }}</h3>
+    <p>Are you sure you want to {{ dialogType }} {{ coinAmount }} coins?</p>
+    <div class="dialog-buttons">
+      <button (click)="confirmAction()">Yes</button>
+      <button (click)="closeDialog()">Cancel</button>
+    </div>
+  </div>
+  

@@ -43,7 +43,7 @@ export class NearbyVetsComponent {
   }
 
   loadNearbyVets(): void {
-    const url = `http://127.0.0.1:8000/vets/nearby/?username=${this.farmerName}`;
+    const url = `http://127.0.0.1:8000/nearby-vets/?username=${this.farmerName}`;
     this.http.get<any[]>(url).subscribe({
       next: (response) => {
         this.nearbyVets = response.map(vet => ({

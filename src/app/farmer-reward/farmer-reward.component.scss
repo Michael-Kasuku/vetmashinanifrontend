@@ -1,0 +1,172 @@
+/* Container styles */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main content box */
+section {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Headings and text */
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 8px 0;
+}
+
+/* Coin actions */
+.coin-actions {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.coin-actions input {
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.coin-actions input:focus {
+  outline: none;
+  border-color: #3f51b5;
+}
+
+.coin-actions button {
+  width: 100%;
+  max-width: 250px;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+  background-color: #3f51b5;
+}
+
+.coin-actions button:hover {
+  background-color: #303f9f;
+}
+
+.coin-actions .withdraw-btn {
+  background-color: #f44336;
+}
+
+.coin-actions .withdraw-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Snackbar styles */
+.snackbar-success {
+  background-color: #4caf50 !important;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: #f44336 !important;
+  color: white;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Dialog box */
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.dialog-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+.dialog-box p {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.dialog-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-buttons button:first-child {
+  background-color: #4caf50;
+}
+
+.dialog-buttons button:first-child:hover {
+  background-color: #388e3c;
+}
+
+.dialog-buttons button:last-child {
+  background-color: #f44336;
+}
+
+.dialog-buttons button:last-child:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .coin-actions input,
+  .coin-actions button {
+    max-width: 100%;
+  }
+}

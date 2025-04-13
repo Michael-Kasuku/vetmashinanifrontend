@@ -10,6 +10,7 @@ import { DiseaseDiagnosisComponent } from './disease-diagnosis/disease-diagnosis
 import { FavoriteVetsComponent } from './favorite-vets/favorite-vets.component';
 import { NearbyVetsComponent } from './nearby-vets/nearby-vets.component';
 import { FarmerNotificationsComponent } from './farmer-notifications/farmer-notifications.component';
+import { FarmerRewardComponent } from './farmer-reward/farmer-reward.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ export const routes: Routes = [
     { path: 'farmer/signup', component: FarmerSignupComponent },
     { path: 'farmer/dashboard', component: FarmerDashboardComponent },
     { path: 'farmer/notifications', component: FarmerNotificationsComponent },
+    { path: 'farmer/rewards', component: FarmerRewardComponent },
     { path: 'vet/login', component: VetLoginComponent },
     { path: 'vet/signup', component: VetSignupComponent },
     { path: 'vet/dashboard', component: VetDashboardComponent },
