@@ -7,6 +7,7 @@ import { catchError } from 'rxjs/operators';
 
 @Component({
   selector: 'app-farmer-appointment',
+  standalone:true,
   imports: [
     CommonModule,
     MatSnackBarModule,
@@ -53,7 +54,7 @@ export class FarmerAppointmentComponent implements OnInit{
       )
       .subscribe(data => {
         this.pendingAppointments = data.filter(n => n.status === 'pending');
-        this.approvedAppointments = data.filter(n => n.status === 'accepted');
+        this.approvedAppointments = data.filter(n => n.status === 'approved');
         this.cancelledAppointments = data.filter(n => n.status === 'cancelled');
       });
   }  
@@ -84,5 +85,4 @@ export class FarmerAppointmentComponent implements OnInit{
   closeSnackbar() {
     this.snackBar.dismiss();
   }
-
 }

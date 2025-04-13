@@ -50,10 +50,10 @@ export class VetLoginComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post<any>('http://127.0.0.1:8000/login/', payload, { headers }).subscribe({
+    this.http.post<any>('http://127.0.0.1:8000/vet-login/', payload, { headers }).subscribe({
       next: (response) => {
-        // Save farmer info in local storage
-        localStorage.setItem('vet', JSON.stringify(response.user));
+        // Save vet info in local storage
+        localStorage.setItem('vet_name', response.user.username);
 
         this.openSnackbar('Login successful!', 'success');
 

@@ -1,1 +1,38 @@
-<h1>Vet Dashboard is working</h1>
+<div class="dashboard-layout">
+    <nav class="sidebar">
+      <h1>Vet Mashinani</h1>
+      <ul>
+        <li><a href="http://localhost:4200/vet/dashboard">Dashboard</a></li>
+        <li><a href="http://localhost:4200/vet/appointments">My Appointments</a></li>
+        <li><a href="http://localhost:4200/vet/profile">My Profile</a></li>
+        <li><a href="#" (click)="logout($event)">Logout</a></li>
+      </ul>
+    </nav>
+  
+    <main class="main-content">
+      <header class="dashboard-header d-flex justify-content-between align-items-center">
+        <div>
+          <h2>Welcome back, {{ vetName }}!</h2>
+          <div class="quick-actions">
+            <a href="http://localhost:4200/vet/notifications">Notifications</a>
+            <a href="http://localhost:4200/disease/diagnosis">Disease Diagnosis</a>
+            <a href="http://localhost:4200/vet/rewards">Rewards</a>
+            <a href="/help/vetmanual.pdf">Vet Manual</a>
+          </div>
+        </div>        
+      </header>      
+  
+      <!-- Placeholder for stats/appointments -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h4>Coin Balance</h4>
+          <p>{{ coinBalance }}</p>
+        </div>
+        <div class="stat-card">
+          <h4>Wallet Balance</h4>
+          <p>Ksh. {{ walletBalance }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  

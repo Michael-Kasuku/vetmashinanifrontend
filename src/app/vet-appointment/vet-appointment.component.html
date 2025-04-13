@@ -6,9 +6,13 @@
         <h3>Pending</h3>
         <div *ngIf="pendingAppointments.length === 0" class="empty">No pending appointments.</div>
         <div class="card" *ngFor="let appt of pendingAppointments">
-          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer:</strong> {{ appt.farmer }}</p>
           <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
           <p><strong>Scheduled on:</strong> {{ convertToEAT(appt.time_sent) }}</p>
+          <div class="btn-actions">
+            <button class="approve-btn" (click)="openDialog(appt.id, 'approved')">Approve</button>
+            <button class="cancel-btn" (click)="openDialog(appt.id, 'cancelled')">Cancel</button>
+          </div>          
         </div>
       </div>
   
@@ -16,7 +20,7 @@
         <h3>Approved</h3>
         <div *ngIf="approvedAppointments.length === 0" class="empty">No approved appointments.</div>
         <div class="card" *ngFor="let appt of approvedAppointments">
-          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer:</strong> {{ appt.farmer }}</p>
           <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
           <p><strong>Vet Note:</strong> {{ appt.vet_note }}</p>
           <p><strong>Scheduled on:</strong> {{ convertToEAT(appt.time_sent) }}</p>
@@ -27,11 +31,22 @@
         <h3>Cancelled</h3>
         <div *ngIf="cancelledAppointments.length === 0" class="empty">No cancelled appointments.</div>
         <div class="card" *ngFor="let appt of cancelledAppointments">
-          <p><strong>Vet:</strong> {{ appt.vet }}</p>
+          <p><strong>Farmer:</strong> {{ appt.farmer }}</p>
           <p><strong>Farmer Note:</strong> {{ appt.farmer_note }}</p>
           <p><strong>Vet Note:</strong> {{ appt.vet_note }}</p>
           <p><strong>Scheduled on:</strong> {{ convertToEAT(appt.time_sent) }}</p>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="dialog-backdrop" *ngIf="showDialog">
+    <div class="dialog-box">
+      <h3>{{ selectedAction | titlecase }} Appointment</h3>
+      <p>Please enter a note:</p>
+      <textarea [(ngModel)]="this.vetNote" rows="4" placeholder="Vet note..."></textarea>
+      <div class="dialog-buttons">
+        <button (click)="closeDialog()">Cancel</button>
+        <button class="submit-btn" (click)="submitNote()">Submit</button>
       </div>
     </div>
   </div>

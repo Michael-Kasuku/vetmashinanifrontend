@@ -1,0 +1,51 @@
+<div class="update-profile-container">
+    <mat-card class="update-card elevation">
+      <mat-card-header>
+        <div class="header-content">
+          <mat-card-title class="title">Update Profile</mat-card-title>
+          <mat-card-subtitle class="subtitle">Let us know where you're located</mat-card-subtitle>
+        </div>
+      </mat-card-header>
+  
+      <mat-divider></mat-divider>
+  
+      <mat-card-content>
+        <form (ngSubmit)="handleSubmit($event)" class="form" aria-label="Update location form">
+          <mat-form-field appearance="outline" class="location-field">
+            <mat-label>Location</mat-label>
+            <input
+              matInput
+              type="text"
+              name="Location"
+              [(ngModel)]="formData.Location"
+              [matAutocomplete]="auto"
+              (input)="fetchLocations(formData.Location)"
+              placeholder="Search for a location"
+              required
+              aria-required="true"
+            />
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectLocation($event)">
+              <mat-option *ngIf="locationOptions.length === 0" disabled>
+                No results found
+              </mat-option>
+              <mat-option *ngFor="let location of locationOptions" [value]="location.name">
+                {{ location.name }}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+  
+          <mat-card-actions class="button-container">
+            <button
+              mat-raised-button
+              class="update-btn"
+              type="submit"
+              [disabled]="!formData.Location"
+            >
+              Save Changes
+            </button>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
