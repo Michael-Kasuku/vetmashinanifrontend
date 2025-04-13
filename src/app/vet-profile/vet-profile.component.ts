@@ -110,7 +110,7 @@ export class VetProfileComponent implements OnInit{
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.patch('http://127.0.0.1:8000/update-profile/', payload, { headers })
+    this.http.patch('https://michaelotienokasuku.pythonanywhere.com/update-profile/', payload, { headers })
       .subscribe({
         next: (res: any) => {
           this.openSnackbar(res.message || 'Location updated successfully!', 'success');

@@ -50,7 +50,7 @@ export class VetLoginComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post<any>('http://127.0.0.1:8000/vet-login/', payload, { headers }).subscribe({
+    this.http.post<any>('https://michaelotienokasuku.pythonanywhere.com/vet-login/', payload, { headers }).subscribe({
       next: (response) => {
         // Save vet info in local storage
         localStorage.setItem('vet_name', response.user.username);

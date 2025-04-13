@@ -43,7 +43,7 @@ export class NearbyVetsComponent {
   }
 
   loadNearbyVets(): void {
-    const url = `http://127.0.0.1:8000/nearby-vets/?username=${this.farmerName}`;
+    const url = `https://michaelotienokasuku.pythonanywhere.com/nearby-vets/?username=${this.farmerName}`;
     this.http.get<any[]>(url).subscribe({
       next: (response) => {
         this.nearbyVets = response.map(vet => ({
@@ -79,7 +79,7 @@ export class NearbyVetsComponent {
       farmer_note: this.appointmentDescription
     };
   
-    this.http.post('http://127.0.0.1:8000/appointments/', appointmentPayload).subscribe({
+    this.http.post('https://michaelotienokasuku.pythonanywhere.com/appointments/', appointmentPayload).subscribe({
       next: () => {
         this.openSnackbar(`Appointment successfully booked with ${this.selectedVet}!`, 'success');
         this.closeDialog();
@@ -96,7 +96,7 @@ export class NearbyVetsComponent {
     payload.set('username', this.farmerName);
     payload.set('favorite_username', vetUsername);
   
-    this.http.post('http://localhost:8000/add-favorite/', payload.toString(), {
+    this.http.post('https://michaelotienokasuku.pythonanywhere.com/add-favorite/', payload.toString(), {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).subscribe({
       next: () => {

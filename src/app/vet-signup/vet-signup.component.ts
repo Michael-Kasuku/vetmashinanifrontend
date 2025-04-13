@@ -118,7 +118,7 @@ export class VetSignupComponent {
 
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
-    this.http.post('http://127.0.0.1:8000/signup/', payload, { headers })
+    this.http.post('https://michaelotienokasuku.pythonanywhere.com/signup/', payload, { headers })
       .subscribe({
         next: (res: any) => {
           this.openSnackbar(res.message || 'Signup successful!', 'success');

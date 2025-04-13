@@ -40,7 +40,7 @@ export class FarmerNotificationsComponent implements OnInit {
   }
 
   loadNotifications(): void {
-    this.http.get<any[]>(`http://127.0.0.1:8000/get-notifications/?username=${this.farmerName}`)
+    this.http.get<any[]>(`https://michaelotienokasuku.pythonanywhere.com/get-notifications/?username=${this.farmerName}`)
       .pipe(
         catchError(err => {
           this.openSnackbar('Error loading notifications', 'error');
@@ -56,7 +56,7 @@ export class FarmerNotificationsComponent implements OnInit {
   markAsRead(notificationId: number): void {
     const body = { notification_id: notificationId };
 
-    this.http.patch('http://localhost:8000/mark-notification-as-read/', body)
+    this.http.patch('https://michaelotienokasuku.pythonanywhere.com/mark-notification-as-read/', body)
       .pipe(
         catchError(err => {
           this.openSnackbar('Error marking notification as read', 'error');

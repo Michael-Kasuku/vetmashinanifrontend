@@ -44,7 +44,7 @@ export class FavoriteVetsComponent implements OnInit {
   }
 
   loadFavoriteVets(): void {
-    const url = `http://127.0.0.1:8000/favorite-vets/?username=${this.farmerName}`;
+    const url = `https://michaelotienokasuku.pythonanywhere.com/favorite-vets/?username=${this.farmerName}`;
     this.http.get<any[]>(url).subscribe({
       next: (response) => {
         this.favoriteVets = response.map(vet => vet.username);
@@ -77,7 +77,7 @@ export class FavoriteVetsComponent implements OnInit {
       farmer_note: this.appointmentDescription
     };
   
-    this.http.post('http://127.0.0.1:8000/appointments/', appointmentPayload).subscribe({
+    this.http.post('https://michaelotienokasuku.pythonanywhere.com/appointments/', appointmentPayload).subscribe({
       next: () => {
         this.openSnackbar(`Appointment successfully booked with ${this.selectedVet}!`, 'success');
         this.closeDialog();

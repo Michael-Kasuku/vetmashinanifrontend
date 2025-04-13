@@ -52,7 +52,7 @@ export class VetAppointmentComponent implements OnInit {
   }
 
   loadAppointments(): void {
-    this.http.get<any[]>(`http://127.0.0.1:8000/appointments/?username=${this.vetName}`)
+    this.http.get<any[]>(`https://michaelotienokasuku.pythonanywhere.com/appointments/?username=${this.vetName}`)
       .pipe(
         catchError(err => {
           this.openSnackbar('Error loading appointments', 'error');
@@ -106,7 +106,7 @@ export class VetAppointmentComponent implements OnInit {
         username: this.vetName
       };
   
-      this.http.patch('http://localhost:8000/appointments/', payload)
+      this.http.patch('https://michaelotienokasuku.pythonanywhere.com/appointments/', payload)
         .subscribe({
           next: () => {
             this.openSnackbar(`Appointment ${this.selectedAction}`, 'success');

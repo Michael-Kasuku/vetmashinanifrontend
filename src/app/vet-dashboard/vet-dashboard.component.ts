@@ -45,7 +45,7 @@ export class VetDashboardComponent implements OnInit {
   }
 
   getCoinBalance() {
-    const apiUrl = `http://127.0.0.1:8000/get-coin-balance/?username=${this.vetName}`;
+    const apiUrl = `https://michaelotienokasuku.pythonanywhere.com/get-coin-balance/?username=${this.vetName}`;
     this.http.get<any>(apiUrl).subscribe(
       (response) => {
         this.coinBalance = response.coin_balance || 0.0;
@@ -58,7 +58,7 @@ export class VetDashboardComponent implements OnInit {
   }
 
   getWalletBalance() {
-    const apiUrl = `http://127.0.0.1:8000/get-wallet-balance/?username=${this.vetName}`;
+    const apiUrl = `https://michaelotienokasuku.pythonanywhere.com/get-wallet-balance/?username=${this.vetName}`;
     this.http.get<any>(apiUrl).subscribe(
       (response) => {
         this.walletBalance = response.wallet_balance || 0.0;

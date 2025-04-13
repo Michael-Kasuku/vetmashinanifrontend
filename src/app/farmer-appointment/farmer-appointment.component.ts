@@ -45,7 +45,7 @@ export class FarmerAppointmentComponent implements OnInit{
   }
 
   loadAppointments(): void {
-    this.http.get<any[]>(`http://127.0.0.1:8000/appointments/?username=${this.farmerName}`)
+    this.http.get<any[]>(`https://michaelotienokasuku.pythonanywhere.com/appointments/?username=${this.farmerName}`)
       .pipe(
         catchError(err => {
           this.openSnackbar('Error loading appointments', 'error');

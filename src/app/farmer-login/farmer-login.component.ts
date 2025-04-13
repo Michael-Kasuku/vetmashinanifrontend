@@ -50,7 +50,7 @@ export class FarmerLoginComponent {
   
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
   
-    this.http.post<any>('http://127.0.0.1:8000/farmer-login/', payload, { headers }).subscribe({
+    this.http.post<any>('https://michaelotienokasuku.pythonanywhere.com/farmer-login/', payload, { headers }).subscribe({
       next: (response) => {
         localStorage.setItem('farmer_name', response.user.username);
   
