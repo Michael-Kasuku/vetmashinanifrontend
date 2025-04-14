@@ -1,53 +1,38 @@
 <div class="dashboard-layout">
-  <!-- Sidebar for desktop -->
-  <nav class="sidebar">
-    <h1>Vet Mashinani</h1>
-    <ul>
-      <li><a href="https://www.vetmashinani.com/vet/dashboard">Dashboard</a></li>
-      <li><a href="https://www.vetmashinani.com/vet/appointments">My Appointments</a></li>
-      <li><a href="https://www.vetmashinani.com/vet/profile">My Profile</a></li>
-      <li><a href="#" (click)="logout($event)">Logout</a></li>
-    </ul>
-  </nav>
-
-  <!-- Mobile Sidebar -->
-  <nav class="sidebar-mobile" #sidebarMobile>
-    <h1>Vet Mashinani</h1>
-    <ul>
-      <li><a href="https://www.vetmashinani.com/vet/dashboard">Dashboard</a></li>
-      <li><a href="https://www.vetmashinani.com/vet/appointments">My Appointments</a></li>
-      <li><a href="https://www.vetmashinani.com/vet/profile">My Profile</a></li>
-      <li><a href="#" (click)="logout($event)">Logout</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hamburger Icon -->
-  <div class="hamburger-icon" #hamburgerIcon>&#9776;</div>
-
-  <!-- Main content area -->
-  <main class="main-content">
-    <header class="dashboard-header d-flex justify-content-between align-items-center">
-      <div>
-        <h2>Welcome back, {{ vetName }}!</h2>
-        <div class="quick-actions">
-          <a href="https://www.vetmashinani.com/vet/notifications">Notifications</a>
-          <a href="https://www.vetmashinani.com/disease/diagnosis">Disease Diagnosis</a>
-          <a href="https://www.vetmashinani.com/vet/rewards">Rewards</a>
-          <a href="/help/vetmanual.pdf">Vet Manual</a>
+    <nav class="sidebar">
+      <h1>Vet Mashinani</h1>
+      <ul>
+        <li><a href="https://www.vetmashinani.com/vet/dashboard">Dashboard</a></li>
+        <li><a href="https://www.vetmashinani.com/vet/appointments">My Appointments</a></li>
+        <li><a href="https://www.vetmashinani.com/vet/profile">My Profile</a></li>
+        <li><a href="#" (click)="logout($event)">Logout</a></li>
+      </ul>
+    </nav>
+  
+    <main class="main-content">
+      <header class="dashboard-header d-flex justify-content-between align-items-center">
+        <div>
+          <h2>Welcome back, {{ vetName }}!</h2>
+          <div class="quick-actions">
+            <a href="https://www.vetmashinani.com/vet/notifications">Notifications</a>
+            <a href="https://www.vetmashinani.com/disease/diagnosis">Disease Diagnosis</a>
+            <a href="https://www.vetmashinani.com/vet/rewards">Rewards</a>
+            <a href="/help/vetmanual.pdf">Vet Manual</a>
+          </div>
+        </div>        
+      </header>      
+  
+      <!-- Placeholder for stats/appointments -->
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h4>Coin Balance</h4>
+          <p>{{ coinBalance }}</p>
         </div>
-      </div>        
-    </header>      
-
-    <!-- Dashboard Stats -->
-    <div class="dashboard-stats">
-      <div class="stat-card">
-        <h4>Coin Balance</h4>
-        <p>{{ coinBalance }}</p>
+        <div class="stat-card">
+          <h4>Wallet Balance</h4>
+          <p>Ksh. {{ walletBalance }}</p>
+        </div>
       </div>
-      <div class="stat-card">
-        <h4>Wallet Balance</h4>
-        <p>Ksh. {{ walletBalance }}</p>
-      </div>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
+  

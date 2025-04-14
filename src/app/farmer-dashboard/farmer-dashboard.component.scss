@@ -15,8 +15,6 @@
   padding: 1.5rem;
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .sidebar h1 {
@@ -49,61 +47,6 @@
   background: #1976d2;
 }
 
-/* Hamburger menu icon */
-.hamburger-icon {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1000;
-}
-
-/* Mobile Sidebar */
-.sidebar-mobile {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: #1b5e20;
-  color: white;
-  z-index: 999;
-  flex-direction: column;
-  padding: 1rem;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  li {
-    margin: 1.5rem 0;
-
-    a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      display: block;
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-
-      &:hover,
-      &.active {
-        background: #1976d2;
-      }
-    }
-  }
-
-  &.open {
-    display: flex; // Show sidebar when opened
-  }
-}
-
 /* Main content */
 .main-content {
   flex: 1;
@@ -133,19 +76,19 @@
   flex-wrap: wrap;
 }
 
-.quick-actions a {
+.quick-actions button {
   background: #388e3c;
   color: white;
+  border: none;
   padding: 1rem 1.5rem;
   border-radius: 8px;
   font-size: 1rem;
-  text-decoration: none;
-  display: inline-block;
+  cursor: pointer;
   transition: background 0.3s;
+}
 
-  &:hover {
-    background: #2e7d32;
-  }
+.quick-actions button:hover {
+  background: #2e7d32;
 }
 
 .dashboard-stats {
@@ -185,15 +128,10 @@
   }
 
   .sidebar {
-    display: none; /* Hide sidebar on small screens */
-  }
-
-  .sidebar-mobile {
-    display: flex; /* Show the sidebar in mobile view only when toggled */
-  }
-
-  .hamburger-icon {
-    display: block; /* Show hamburger icon */
+    width: 100%;
+    padding: 1rem;
+    box-shadow: none;
+    border-bottom: 1px solid #ccc;
   }
 
   .main-content {
@@ -235,7 +173,7 @@
     font-size: 1.4rem;
   }
 
-  .quick-actions a {
+  .quick-actions button {
     padding: 0.8rem 1.2rem;
     font-size: 0.9rem;
   }

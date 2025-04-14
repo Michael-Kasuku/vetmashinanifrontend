@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
@@ -12,11 +12,9 @@ import { Router } from '@angular/router';
     MatSnackBarModule,
   ],
   templateUrl: './vet-dashboard.component.html',
-  styleUrls: ['./vet-dashboard.component.scss']
+  styleUrl: './vet-dashboard.component.scss'
 })
 export class VetDashboardComponent implements OnInit {
-  @ViewChild('hamburgerIcon') hamburgerIcon!: ElementRef;
-  @ViewChild('sidebarMobile') sidebarMobile!: ElementRef;
 
   vetName: string = '';
   coinBalance: number = 0.0;
@@ -30,11 +28,6 @@ export class VetDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchVetData();
-  }
-
-  ngAfterViewInit(): void {
-    // Add event listener to toggle sidebar on hamburger click
-    this.hamburgerIcon.nativeElement.addEventListener('click', this.toggleSidebar.bind(this));
   }
 
   fetchVetData() {
@@ -86,7 +79,6 @@ export class VetDashboardComponent implements OnInit {
       this.router.navigate(['/vet/login']);
     }
   }
-
   openSnackbar(message: string, severity: 'success' | 'error') {
     const snackBarClass = severity === 'success' ? 'snackbar-success' : 'snackbar-error';
     this.snackBar.open(message, 'Close', {
@@ -97,10 +89,5 @@ export class VetDashboardComponent implements OnInit {
 
   closeSnackbar() {
     this.snackBar.dismiss();
-  }
-
-  // Toggle sidebar visibility for mobile
-  toggleSidebar(): void {
-    this.sidebarMobile.nativeElement.classList.toggle('open');
   }
 }
