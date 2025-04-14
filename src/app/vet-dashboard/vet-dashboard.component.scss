@@ -1,193 +1,254 @@
 .dashboard-layout {
-    display: flex;
-    min-height: 100vh;
-    background: #f0f4f8;
-    font-family: 'Segoe UI', sans-serif;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  
-  /* Sidebar styles */
-  .sidebar {
-    width: 220px;
-    background: #1976d2;
-    color: white;
-    padding: 1.5rem;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-  }
-  
-  .sidebar h1 {
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .sidebar ul {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  background: #1976d2;
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h1 {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 1.5rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  background: darkblue;
+}
+
+/* Hamburger menu icon */
+.hamburger-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+/* Mobile Sidebar */
+.sidebar-mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #1b5e20;
+  color: white;
+  z-index: 999;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+
+  ul {
     list-style: none;
     padding: 0;
   }
-  
-  .sidebar ul li {
+
+  li {
     margin: 1.5rem 0;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+
+      &:hover,
+      &.active {
+        background: #1976d2;
+      }
+    }
   }
-  
-  .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    display: block;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
+
+  &.open {
+    display: flex; // Show sidebar when opened
   }
-  
-  .sidebar ul li a:hover,
-  .sidebar ul li a.active {
-    background: darkblue;
-  }
-  
-  /* Main content */
-  .main-content {
-    flex: 1;
-    padding: 2rem;
-    position: relative;
-  }
-  
-  .dashboard-header {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-  }
-  
-  .dashboard-header h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .quick-actions {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .quick-actions button {
-    background: #388e3c;
-    color: white;
-    border: none;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .quick-actions button:hover {
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.quick-actions a {
+  background: #388e3c;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+
+  &:hover {
     background: #2e7d32;
   }
-  
+}
+
+.dashboard-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 250px;
+}
+
+.stat-card h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ==================== Responsive Breakpoints ==================== */
+
+/* Medium screens (tablets, landscape phones) */
+@media (max-width: 768px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    display: none; /* Hide sidebar on small screens */
+  }
+
+  .sidebar-mobile {
+    display: flex; /* Show the sidebar in mobile view only when toggled */
+  }
+
+  .hamburger-icon {
+    display: block; /* Show hamburger icon */
+  }
+
+  .main-content {
+    padding: 1.5rem;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .dashboard-stats {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1rem;
   }
-  
+
   .stat-card {
-    flex: 1;
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-width: unset;
+  }
+}
+
+/* Extra small screens (old phones, < 480px) */
+@media (max-width: 480px) {
+  .sidebar h1 {
+    font-size: 1.1rem;
     text-align: center;
-    min-width: 250px;
   }
-  
+
+  .sidebar ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .dashboard-header {
+    padding: 1.2rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .quick-actions a {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    padding: 1.2rem;
+  }
+
   .stat-card h4 {
-    margin-bottom: 1rem;
-    color: #333;
+    font-size: 1rem;
   }
-  
+
   .stat-card p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2e7d32;
+    font-size: 1.2rem;
   }
-  
-  /* ==================== Responsive Breakpoints ==================== */
-  
-  /* Medium screens (tablets, landscape phones) */
-  @media (max-width: 768px) {
-    .dashboard-layout {
-      flex-direction: column;
-    }
-  
-    .sidebar {
-      width: 100%;
-      padding: 1rem;
-      box-shadow: none;
-      border-bottom: 1px solid #ccc;
-    }
-  
-    .main-content {
-      padding: 1.5rem;
-    }
-  
-    .quick-actions {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .dashboard-stats {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .stat-card {
-      min-width: unset;
-    }
-  }
-  
-  /* Extra small screens (old phones, < 480px) */
-  @media (max-width: 480px) {
-    .sidebar h1 {
-      font-size: 1.1rem;
-      text-align: center;
-    }
-  
-    .sidebar ul li a {
-      padding: 0.6rem 1rem;
-      font-size: 0.9rem;
-    }
-  
-    .dashboard-header {
-      padding: 1.2rem;
-    }
-  
-    .dashboard-header h2 {
-      font-size: 1.4rem;
-    }
-  
-    .quick-actions button {
-      padding: 0.8rem 1.2rem;
-      font-size: 0.9rem;
-    }
-  
-    .stat-card {
-      padding: 1.2rem;
-    }
-  
-    .stat-card h4 {
-      font-size: 1rem;
-    }
-  
-    .stat-card p {
-      font-size: 1.2rem;
-    }
-  }
-  
+}

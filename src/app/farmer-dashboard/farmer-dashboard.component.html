@@ -1,40 +1,53 @@
 <div class="dashboard-layout">
-    <nav class="sidebar">
-      <h1>Vet Mashinani</h1>
-      <ul>
-        <li><a href="https://www.vetmashinani.com/farmer/dashboard">Dashboard</a></li>
-        <li><a href="https://www.vetmashinani.com/farmer/appointments">My Appointments</a></li>
-        <li><a href="https://www.vetmashinani.com/farmer/profile">My Profile</a></li>
-        <li><a href="#" (click)="logout($event)">Logout</a></li>
-      </ul>
-    </nav>
-  
-    <main class="main-content">
-      <header class="dashboard-header d-flex justify-content-between align-items-center">
-        <div>
-          <h2>Welcome back, {{ farmerName }}!</h2>
-          <div class="quick-actions">
-            <a href="https://www.vetmashinani.com/farmer/notifications">Notifications</a>
-            <a href="https://www.vetmashinani.com/favorite/vets">Favorites</a>
-            <a href="https://www.vetmashinani.com/nearby/vets">Nearby Vets</a>
-            <a href="https://www.vetmashinani.com/disease/diagnosis">Disease Diagnosis</a>
-            <a href="https://www.vetmashinani.com/farmer/rewards">Rewards</a>
-            <a href="/help/farmermanual.pdf">Farmer Manual</a>
-          </div>
-        </div>        
-      </header>      
-  
-      <!-- Placeholder for stats/appointments -->
-      <div class="dashboard-stats">
-        <div class="stat-card">
-          <h4>Coin Balance</h4>
-          <p>{{ coinBalance }}</p>
+  <nav class="sidebar">
+    <h1>Vet Mashinani</h1>
+    <ul>
+      <li><a href="https://www.vetmashinani.com/farmer/dashboard">Dashboard</a></li>
+      <li><a href="https://www.vetmashinani.com/farmer/appointments">My Appointments</a></li>
+      <li><a href="https://www.vetmashinani.com/farmer/profile">My Profile</a></li>
+      <li><a href="#" (click)="logout($event)">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile Sidebar (hidden by default on larger screens) -->
+  <nav class="sidebar-mobile" #sidebarMobile>
+    <h1>Vet Mashinani</h1>
+    <ul>
+      <li><a href="https://www.vetmashinani.com/farmer/dashboard">Dashboard</a></li>
+      <li><a href="https://www.vetmashinani.com/farmer/appointments">My Appointments</a></li>
+      <li><a href="https://www.vetmashinani.com/farmer/profile">My Profile</a></li>
+      <li><a href="#" (click)="logout($event)">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hamburger Icon (visible on small screens) -->
+  <div class="hamburger-icon" #hamburgerIcon>&#9776;</div>
+
+  <main class="main-content">
+    <header class="dashboard-header d-flex justify-content-between align-items-center">
+      <div>
+        <h2>Welcome back, {{ farmerName }}!</h2>
+        <div class="quick-actions">
+          <a href="https://www.vetmashinani.com/farmer/notifications">Notifications</a>
+          <a href="https://www.vetmashinani.com/favorite/vets">Favorites</a>
+          <a href="https://www.vetmashinani.com/nearby/vets">Nearby Vets</a>
+          <a href="https://www.vetmashinani.com/disease/diagnosis">Disease Diagnosis</a>
+          <a href="https://www.vetmashinani.com/farmer/rewards">Rewards</a>
+          <a href="/help/farmermanual.pdf">Farmer Manual</a>
         </div>
-        <div class="stat-card">
-          <h4>Wallet Balance</h4>
-          <p>Ksh. {{ walletBalance }}</p>
-        </div>
+      </div>        
+    </header>
+
+    <!-- Placeholder for stats/appointments -->
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <h4>Coin Balance</h4>
+        <p>{{ coinBalance }}</p>
       </div>
-    </main>
-  </div>
-  
+      <div class="stat-card">
+        <h4>Wallet Balance</h4>
+        <p>Ksh. {{ walletBalance }}</p>
+      </div>
+    </div>
+  </main>
+</div>

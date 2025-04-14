@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
@@ -15,6 +15,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./farmer-dashboard.component.scss']
 })
 export class FarmerDashboardComponent implements OnInit {
+  @ViewChild('hamburgerIcon') hamburgerIcon!: ElementRef;
+  @ViewChild('sidebarMobile') sidebarMobile!: ElementRef;
+
   farmerName: string = '';
   coinBalance: number = 0.0;
   walletBalance: number = 0.0;
@@ -27,6 +30,11 @@ export class FarmerDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchFarmerData();
+  }
+
+  ngAfterViewInit(): void {
+    // Ensure the sidebar toggle works after view initialization
+    this.hamburgerIcon.nativeElement.addEventListener('click', this.toggleSidebar.bind(this));
   }
 
   fetchFarmerData() {
@@ -89,5 +97,10 @@ export class FarmerDashboardComponent implements OnInit {
 
   closeSnackbar() {
     this.snackBar.dismiss();
+  }
+
+  // Toggle sidebar visibility on mobile
+  toggleSidebar(): void {
+    this.sidebarMobile.nativeElement.classList.toggle('open');
   }
 }
